@@ -8,7 +8,7 @@ target 'XCNetworking' do
   # use_frameworks!
 
   # Pods for XCNetworking
-  pod 'AFNetworking'
-  pod 'YYCache'
+  pod 'AFNetworking','3.2.1'
+  pod 'YYCache','1.0.4'
 
 end
