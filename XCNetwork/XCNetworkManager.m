@@ -9,11 +9,7 @@
 #import "XCBaseRequest.h"
 #import "XCNetworkConfig.h"
 #import "XCNetworkCache.h"
-#if __has_include(<AFNetworking/AFNetworking.h>)
 #import <AFNetworking/AFNetworking.h>
-#else
-#import "AFNetworking.h"
-#endif
 
 
 #define weakObj(self) __weak typeof(self) weak_##self = self;
