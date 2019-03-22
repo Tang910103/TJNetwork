@@ -1,14 +1,14 @@
 //
-//  XCNetworkManager.m
-//  XCNetworking
+//  TJNetworkManager.m
+//  TJNetworking
 //  Created by Tang杰 on 2019/3/11.
 //  Copyright © 2019 Tang杰. All rights reserved.
 //
 
-#import "XCNetworkManager.h"
-#import "XCBaseRequest.h"
-#import "XCNetworkConfig.h"
-#import "XCNetworkCache.h"
+#import "TJNetworkManager.h"
+#import "TJBaseRequest.h"
+#import "TJNetworkConfig.h"
+#import "TJNetworkCache.h"
 #if __has_include(<AFNetworking/AFNetworking.h>)
 #import <AFNetworking/AFNetworking.h>
 #else
@@ -23,15 +23,15 @@
 #define LOCK() dispatch_semaphore_wait(self->_semaphore, DISPATCH_TIME_FOREVER);
 #define UNLOCK() dispatch_semaphore_signal(self->_semaphore);
 
-@interface XCBaseRequest ()
+@interface TJBaseRequest ()
 @property (nonatomic, strong) NSURLSessionTask *requestTask;
 @end
 
-@interface XCNetworkManager ()
+@interface TJNetworkManager ()
 {
-    NSMutableDictionary<NSNumber *, XCBaseRequest *> *_requests;
+    NSMutableDictionary<NSNumber *, TJBaseRequest *> *_requests;
     dispatch_semaphore_t _semaphore;
-    XCNetworkConfig *_config;
+    TJNetworkConfig *_config;
 }
 /// AF网络管理
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
@@ -39,7 +39,7 @@
 @end
 
 
-@implementation XCNetworkManager
+@implementation TJNetworkManager
 #pragma mark --------------- system methods
 - (instancetype)init
 {
@@ -48,7 +48,7 @@
         _manager = [[AFHTTPSessionManager alloc] init];
         _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
 //        _manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html",nil];
-        _config = [XCNetworkConfig shareObject];
+        _config = [TJNetworkConfig shareObject];
         _requests = @{}.mutableCopy;
         _semaphore = dispatch_semaphore_create(1);
     }
@@ -66,7 +66,7 @@
     return instance;
 }
 
-- (void)addRequest:(XCBaseRequest *)request
+- (void)addRequest:(TJBaseRequest *)request
 {
     NSParameterAssert(request != nil);
     [self requestWillStart:request];
@@ -78,7 +78,7 @@
     UNLOCK()
 }
 
-- (void)cancelRequest:(XCBaseRequest *)request
+- (void)cancelRequest:(TJBaseRequest *)request
 {
     [request.requestTask cancel];
     LOCK()
@@ -94,7 +94,7 @@
     if (allKeys.count > 0) {
         for (NSNumber *key in allKeys) {
             LOCK()
-            XCBaseRequest *request = _requests[key];
+            TJBaseRequest *request = _requests[key];
             UNLOCK()
             [request cancel];
         }
@@ -105,17 +105,17 @@
 
 #pragma mark --------------- private methods
 
-- (XCBaseRequest *)requestByTask:(NSURLSessionTask *)task {
+- (TJBaseRequest *)requestByTask:(NSURLSessionTask *)task {
     LOCK()
-    XCBaseRequest *re = _requests[@(task.taskIdentifier)];
+    TJBaseRequest *re = _requests[@(task.taskIdentifier)];
     UNLOCK()
     return re;
 }
 
 /** 设置请求序列化器 */
-- (void)setupRequestSerializer:(XCBaseRequest *)request {
+- (void)setupRequestSerializer:(TJBaseRequest *)request {
     AFHTTPRequestSerializer *requestSerializer = [AFHTTPRequestSerializer serializer];
-    if (request.requestSerializer == XCJSONRequestSerializer) {
+    if (request.requestSerializer == TJJSONRequestSerializer) {
         requestSerializer = [AFJSONRequestSerializer serializer];
     }
     if (request.username.length > 0 && request.password.length >0) {
@@ -125,7 +125,7 @@
     _manager.requestSerializer = requestSerializer;
 }
 
-- (void)sessionTaskByRequest:(XCBaseRequest *)request
+- (void)sessionTaskByRequest:(TJBaseRequest *)request
 {
     void (^progress)(NSProgress *pr) = ^(NSProgress *pr){
         if (request.progress) {
@@ -162,7 +162,7 @@
         }
     }];
 
-    if (request.requestMethod == XCRequestMethodPOST && request.constructingBodyBlock) {
+    if (request.requestMethod == TJRequestMethodPOST && request.constructingBodyBlock) {
         
 //        上传文件
         task = [_manager uploadTaskWithStreamedRequest:urlRequest progress:progress completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
@@ -210,17 +210,17 @@
 }
 
 
-- (NSMutableURLRequest *)requestWithrepuest:(XCBaseRequest *)request error:(NSError *__autoreleasing *)error
+- (NSMutableURLRequest *)requestWithrepuest:(TJBaseRequest *)request error:(NSError *__autoreleasing *)error
 {
     NSString *URLString = request.url;
     id parameters = request.parameter;
     AFHTTPRequestSerializer *requestSerializer = _manager.requestSerializer;
     NSString *method = @"GET";
     switch (request.requestMethod) {
-        case XCRequestMethodDELETE:
+        case TJRequestMethodDELETE:
             method = @"DELETE";
             break;
-        case XCRequestMethodPOST:
+        case TJRequestMethodPOST:
         {
             if (request.constructingBodyBlock) {
                 return [requestSerializer multipartFormRequestWithMethod:@"POST" URLString:URLString parameters:parameters constructingBodyWithBlock:request.constructingBodyBlock error:error];
@@ -236,18 +236,18 @@
 }
 
 /** 处理请求结果 */
-- (void)handelRequestResult:(id)responseObject error:(NSError *)error request:(XCBaseRequest *)request {
+- (void)handelRequestResult:(id)responseObject error:(NSError *)error request:(TJBaseRequest *)request {
     NSError *requestError = error;
     if (!requestError) {
         request.result = responseObject;
         if ([responseObject isKindOfClass:[NSData class]] && !request.downloadCachePathBlock) {
-            if (request.responseSerializer == XCHTTPResponseSerializer) {
+            if (request.responseSerializer == TJHTTPResponseSerializer) {
                 request.result = [[AFHTTPResponseSerializer serializer] responseObjectForResponse:request.requestTask.response data:responseObject error:&requestError];
-            } else if (request.responseSerializer == XCJSONResponseSerializer) {
+            } else if (request.responseSerializer == TJJSONResponseSerializer) {
                 request.result = [[AFJSONResponseSerializer serializer] responseObjectForResponse:request.requestTask.response data:responseObject error:&requestError];
-            } else if (request.responseSerializer == XCXMLParserResponseSerializer) {
+            } else if (request.responseSerializer == TJXMLParserResponseSerializer) {
                 request.result = [[AFXMLParserResponseSerializer serializer] responseObjectForResponse:request.requestTask.response data:responseObject error:&requestError];
-            } else if (request.responseSerializer == XCPropertyListResponseSerializer) {
+            } else if (request.responseSerializer == TJPropertyListResponseSerializer) {
                 request.result = [[AFPropertyListResponseSerializer serializer] responseObjectForResponse:request.requestTask.response data:responseObject error:&requestError];
             }
         }
@@ -258,31 +258,31 @@
 }
 
 /** 即将开始请求 */
-- (void)requestWillStart:(XCBaseRequest *)request {
-    if ([[XCNetworkConfig shareObject].delegate respondsToSelector:@selector(requestWillStart:)]) {
-        [XCNetworkConfig.shareObject.delegate requestWillStart:request];
+- (void)requestWillStart:(TJBaseRequest *)request {
+    if ([[TJNetworkConfig shareObject].delegate respondsToSelector:@selector(requestWillStart:)]) {
+        [TJNetworkConfig.shareObject.delegate requestWillStart:request];
     }
 }
 
 
 /** 开始请求 */
-- (void)startSession:(XCBaseRequest *)request {
+- (void)startSession:(TJBaseRequest *)request {
     //    开始执行会话
     [request.requestTask resume];
 }
 
 /** 请求完成 */
-- (void)requestDidCompletion:(XCBaseRequest *)request {
+- (void)requestDidCompletion:(TJBaseRequest *)request {
     dispatch_async(dispatch_get_main_queue(), ^{
-        if ([[XCNetworkConfig shareObject].delegate respondsToSelector:@selector(requestWillStop:)]) {
-            [XCNetworkConfig.shareObject.delegate requestWillStop:request];
+        if ([[TJNetworkConfig shareObject].delegate respondsToSelector:@selector(requestWillStop:)]) {
+            [TJNetworkConfig.shareObject.delegate requestWillStop:request];
         }
         BOOL isCache = request.isCache;
         if (request.complete) {
             request.complete(request, &isCache);
         }
         if (isCache) {
-            [XCNetworkCache cacheDataWithRequest:request withBlock:^{
+            [TJNetworkCache cacheDataWithRequest:request withBlock:^{
                 
             }];
         }

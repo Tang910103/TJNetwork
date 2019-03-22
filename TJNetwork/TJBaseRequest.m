@@ -1,21 +1,21 @@
 //
-//  XCBaseRequest.m
-//  XCNetworking
+//  TJBaseRequest.m
+//  TJNetworking
 //  Created by Tang杰 on 2019/3/21.
 //  Copyright © 2019 Tang杰. All rights reserved.
 //
 
-#import "XCBaseRequest.h"
-#import "XCNetworkManager.h"
-#import "XCNetworkCache.h"
-#import "XCNetworkConfig.h"
+#import "TJBaseRequest.h"
+#import "TJNetworkManager.h"
+#import "TJNetworkCache.h"
+#import "TJNetworkConfig.h"
 
-@interface XCBaseRequest ()
+@interface TJBaseRequest ()
 @property (nonatomic, strong) NSURLSessionTask *requestTask;
 @end
 
 
-@implementation XCBaseRequest
+@implementation TJBaseRequest
 
 @synthesize timeoutInterval = _timeoutInterval,
 responseSerializer = _responseSerializer,
@@ -30,7 +30,7 @@ requestHeaders = _requestHeaders;
 {
     self = [super init];
     if (self) {
-        XCNetworkConfig *config = [XCNetworkConfig shareObject];
+        TJNetworkConfig *config = [TJNetworkConfig shareObject];
         _requestSerializer = config.requestSerializer;
         _responseSerializer = config.responseSerializer;
         _timeoutInterval = config.timeoutInterval;
@@ -38,7 +38,7 @@ requestHeaders = _requestHeaders;
         _password = config.password;
         _requestHeaders = config.requestHeaders;
         _isCache = config.isCache;
-        _requestMethod = XCRequestMethodGET;
+        _requestMethod = TJRequestMethodGET;
         _requestTask = nil;
     }
     return self;
@@ -51,9 +51,9 @@ requestHeaders = _requestHeaders;
     return [[self alloc] init];
 }
 
-- (void)startRequestWithCompleteBlock:(XCBaseRequestCompletionBlock)complete
+- (void)startRequestWithCompleteBlock:(TJBaseRequestCompletionBlock)complete
 {
-    [[XCNetworkManager sharedManager] addRequest:self];
+    [[TJNetworkManager sharedManager] addRequest:self];
     if (complete) {
         self.complete = complete;
     }
@@ -61,73 +61,73 @@ requestHeaders = _requestHeaders;
 
 - (void)cancel
 {
-    [[XCNetworkManager sharedManager] cancelRequest:self];
+    [[TJNetworkManager sharedManager] cancelRequest:self];
     [self clearBlock];
 }
 
 - (void)readCacheBlock:(void (^)(id))block
 {
-    [XCNetworkCache readCacheWithRequest:self withBlock:block];
+    [TJNetworkCache readCacheWithRequest:self withBlock:block];
 }
 
-+ (void)get:(NSString *)url parameter:(id)parameter complete:(XCBaseRequestCompletionBlock)complete
++ (void)get:(NSString *)url parameter:(id)parameter complete:(TJBaseRequestCompletionBlock)complete
 {
-    [self custom:^XCBaseRequest *{
-        XCBaseRequest *re = [XCBaseRequest request];
+    [self custom:^TJBaseRequest *{
+        TJBaseRequest *re = [TJBaseRequest request];
         re.url = url;
         re.parameter = parameter;
-        re.requestMethod = XCRequestMethodGET;
+        re.requestMethod = TJRequestMethodGET;
         return re;
     } complete:complete];
 }
 
-+ (void)post:(NSString *)url parameter:(id)parameter complete:(XCBaseRequestCompletionBlock)complete
++ (void)post:(NSString *)url parameter:(id)parameter complete:(TJBaseRequestCompletionBlock)complete
 {
-    [self custom:^XCBaseRequest *{
-        XCBaseRequest *re = [XCBaseRequest request];
+    [self custom:^TJBaseRequest *{
+        TJBaseRequest *re = [TJBaseRequest request];
         re.url = url;
         re.parameter = parameter;
-        re.requestMethod = XCRequestMethodPOST;
+        re.requestMethod = TJRequestMethodPOST;
         return re;
     } complete:complete];
 }
-+ (void)delet:(NSString *)url parameter:(id)parameter complete:(XCBaseRequestCompletionBlock)complete
++ (void)delet:(NSString *)url parameter:(id)parameter complete:(TJBaseRequestCompletionBlock)complete
 {
-    [self custom:^XCBaseRequest *{
-        XCBaseRequest *re = [XCBaseRequest request];
+    [self custom:^TJBaseRequest *{
+        TJBaseRequest *re = [TJBaseRequest request];
         re.url = url;
         re.parameter = parameter;
-        re.requestMethod = XCRequestMethodDELETE;
+        re.requestMethod = TJRequestMethodDELETE;
         return re;
     } complete:complete];
 }
-+ (void)upload:(NSString *)url parameter:(id)parameter bodyBlock:(XCConstructBodyBlock)bodyBlock complete:(XCBaseRequestCompletionBlock)complete
++ (void)upload:(NSString *)url parameter:(id)parameter bodyBlock:(TJConstructBodyBlock)bodyBlock complete:(TJBaseRequestCompletionBlock)complete
 {
-    [self custom:^XCBaseRequest *{
-        XCBaseRequest *re = [XCBaseRequest request];
+    [self custom:^TJBaseRequest *{
+        TJBaseRequest *re = [TJBaseRequest request];
         re.url = url;
         re.parameter = parameter;
-        re.requestMethod = XCRequestMethodPOST;
+        re.requestMethod = TJRequestMethodPOST;
         re.constructingBodyBlock = bodyBlock;
         return re;
     } complete:complete];
 }
-+ (XCBaseRequest *)download:(NSString *)url parameter:(id)parameter resumePath:(NSString *)resumePath downloadCachePath:(XCRequestDownloadCachePathBlock)cachePath progress:(XCBaseRequestProgressBlock)progress complete:(XCBaseRequestCompletionBlock)complete
++ (TJBaseRequest *)download:(NSString *)url parameter:(id)parameter resumePath:(NSString *)resumePath downloadCachePath:(TJRequestDownloadCachePathBlock)cachePath progress:(TJBaseRequestProgressBlock)progress complete:(TJBaseRequestCompletionBlock)complete
 {
-    return [self custom:^XCBaseRequest *{
-        XCBaseRequest *re = [XCBaseRequest request];
+    return [self custom:^TJBaseRequest *{
+        TJBaseRequest *re = [TJBaseRequest request];
         re.url = url;
         re.parameter = parameter;
-        re.requestMethod = XCRequestMethodGET;
+        re.requestMethod = TJRequestMethodGET;
         re.resumePath = resumePath;
         re.progress = progress;
         re.downloadCachePathBlock = cachePath;
         return re;
     } complete:complete];
 }
-+ (XCBaseRequest *)custom:(XCBaseRequest *(^)(void))request complete:(XCBaseRequestCompletionBlock)complete
++ (TJBaseRequest *)custom:(TJBaseRequest *(^)(void))request complete:(TJBaseRequestCompletionBlock)complete
 {
-    XCBaseRequest *re = request();
+    TJBaseRequest *re = request();
     [re startRequestWithCompleteBlock:complete];
     return re;
 }

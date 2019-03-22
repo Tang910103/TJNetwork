@@ -1,12 +1,12 @@
 //
 //  ViewController.m
-//  XCNetworkManager
+//  TJNetworkManager
 //  Created by Tang杰 on 2019/3/8.
 //  Copyright © 2019 Tang杰. All rights reserved.
 //
 
-#import "XCBaseRequestTestController.h"
-#import "XCNetwork.h"
+#import "TJBaseRequestTestController.h"
+#import "TJNetwork.h"
 #import <objc/message.h>
 #import "DetailViewController.h"
 
@@ -30,17 +30,17 @@ NSMutableArray *getTestMethods(Class class)
 }
 
 
-@interface XCBaseRequestTestController ()<UITableViewDelegate,UITableViewDataSource>
+@interface TJBaseRequestTestController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSMutableArray *_myTestMethods;
     NSString *_selectedMethodName;
-    XCBaseRequest *_currentRequest;
+    TJBaseRequest *_currentRequest;
 }
 @property (nonatomic, strong) UITableView *tableView;
 
 @end
 
-@implementation XCBaseRequestTestController
+@implementation TJBaseRequestTestController
 
 - (UITableView *)tableView
 {
@@ -98,51 +98,51 @@ NSMutableArray *getTestMethods(Class class)
 }
 
 - (void)testGet {
-    _currentRequest = [[XCBaseRequest alloc] init];
+    _currentRequest = [[TJBaseRequest alloc] init];
     _currentRequest.url = @"get";
     [_currentRequest startRequestWithCompleteBlock:self.requestComplete];
 }
 
 - (void)testPost {
-    _currentRequest = [[XCBaseRequest alloc] init];
+    _currentRequest = [[TJBaseRequest alloc] init];
     _currentRequest.url = @"post";
-    _currentRequest.requestMethod = XCRequestMethodPOST;
+    _currentRequest.requestMethod = TJRequestMethodPOST;
     [_currentRequest startRequestWithCompleteBlock:self.requestComplete];
 }
 - (void)testCacheResult {
-    _currentRequest = [XCBaseRequest request];
+    _currentRequest = [TJBaseRequest request];
     _currentRequest.url = @"post";
     _currentRequest.isCache = YES;
-    _currentRequest.requestMethod = XCRequestMethodPOST;
+    _currentRequest.requestMethod = TJRequestMethodPOST;
     [_currentRequest startRequestWithCompleteBlock:self.requestComplete];
 }
 
 - (void)testDelete {
-    _currentRequest = [XCBaseRequest request];
+    _currentRequest = [TJBaseRequest request];
     _currentRequest.url = @"delete";
-    _currentRequest.requestMethod = XCRequestMethodDELETE;
+    _currentRequest.requestMethod = TJRequestMethodDELETE;
     [_currentRequest startRequestWithCompleteBlock:self.requestComplete];
 }
 
 - (void)testTimerout {
-    _currentRequest = [XCBaseRequest request];
+    _currentRequest = [TJBaseRequest request];
     _currentRequest.url = @"post";
     _currentRequest.isCache = YES;
     _currentRequest.timeoutInterval = 1;
-    _currentRequest.requestMethod = XCRequestMethodPOST;
+    _currentRequest.requestMethod = TJRequestMethodPOST;
     [_currentRequest startRequestWithCompleteBlock:self.requestComplete];
     [NSThread sleepForTimeInterval:2];
 }
 
 - (void)testDownload {
-    _currentRequest = [XCBaseRequest download:@"http://wind4app-bdys.oss-cn-hangzhou.aliyuncs.com/CMD_MarkDown.zip" parameter:nil resumePath:@"/Users/tangjie/Desktop/001" downloadCachePath:^NSString *(NSURLResponse *response) {
+    _currentRequest = [TJBaseRequest download:@"http://wind4app-bdys.oss-cn-hangzhou.aliyuncs.com/CMD_MarkDown.zip" parameter:nil resumePath:@"/Users/tangjie/Desktop/001" downloadCachePath:^NSString *(NSURLResponse *response) {
         return [@"/Users/tangjie/Downloads" stringByAppendingPathComponent:response.suggestedFilename];
     } progress:nil complete:self.requestComplete];
 }
 
-- (void(^)(XCBaseRequest *request, BOOL *isCache))requestComplete {
+- (void(^)(TJBaseRequest *request, BOOL *isCache))requestComplete {
     return nil;
-    return ^(XCBaseRequest *request, BOOL *isCache){
+    return ^(TJBaseRequest *request, BOOL *isCache){
         if (request.error) {
             NSLog(@"\n请求失败：%s\n%@",__FUNCTION__,request.error);
         } else {

@@ -1,6 +1,6 @@
 //
-//  XCNetworkTools.h
-//  XCNetworking
+//  TJNetworkTools.h
+//  TJNetworking
 //  Created by Tang杰 on 2019/3/15.
 //  Copyright © 2019 Tang杰. All rights reserved.
 //
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XCNetworkTools : NSObject
+@interface TJNetworkTools : NSObject
 #pragma mark ------------ 属性
 
 #pragma mark ------------ 类方法

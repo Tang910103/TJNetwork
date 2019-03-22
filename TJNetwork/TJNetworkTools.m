@@ -1,16 +1,16 @@
 //
-//  XCNetworkTools.m
-//  XCNetworking
+//  TJNetworkTools.m
+//  TJNetworking
 //  Created by Tang杰 on 2019/3/15.
 //  Copyright © 2019 Tang杰. All rights reserved.
 //
 
-#import "XCNetworkTools.h"
+#import "TJNetworkTools.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonCryptor.h>
 
 
-@implementation XCNetworkTools
+@implementation TJNetworkTools
 + (NSString *)URLWithString:(nullable NSString *)URLString relativeToURL:(nullable NSURL *)baseURL
 {
     NSURL *temp = [NSURL URLWithString:URLString];

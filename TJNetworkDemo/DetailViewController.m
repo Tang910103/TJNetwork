@@ -1,12 +1,12 @@
 //
 //  DetailViewController.m
-//  XCNetworking
+//  TJNetworking
 //  Created by Tang杰 on 2019/3/15.
 //  Copyright © 2019 Tang杰. All rights reserved.
 //
 
 #import "DetailViewController.h"
-#import "XCBaseRequest.h"
+#import "TJBaseRequest.h"
 
 #define weakObj(self) autoreleasepool {} __weak typeof(self) weak_##self = self;
 #define strongObj(self) autoreleasepool {} __strong typeof(self) self = weak_##self;
@@ -45,10 +45,10 @@
         NSLog(@"读取缓存---->%@",result);
     }];
     
-//    这里其实可以不用__weak修饰self，XCBaseRequest内部对block做了清空处理不会造成循环引用问题
+//    这里其实可以不用__weak修饰self，TJBaseRequest内部对block做了清空处理不会造成循环引用问题
 //    此处使用只是单纯消除警告
     @weakObj(self)
-    [self.request setComplete:^(XCBaseRequest *request, BOOL *isCache) {
+    [self.request setComplete:^(TJBaseRequest *request, BOOL *isCache) {
         @strongObj(self)
 //        *isCache = YES;// 可以在请求完成后设置是否要缓存请求结果
         _progressView.progress = 0.0;

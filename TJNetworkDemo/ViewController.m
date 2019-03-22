@@ -1,16 +1,16 @@
 //
 //  ViewController.m
-//  XCNetworking
+//  TJNetworking
 //  Created by Tang杰 on 2019/3/21.
 //  Copyright © 2019 Tang杰. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "XCBaseRequestTestController.h"
-#import "XCRequestTestController.h"
-#import "XCNetwork.h"
+#import "TJBaseRequestTestController.h"
+#import "TJRequestTestController.h"
+#import "TJNetwork.h"
 
-@interface ViewController ()<XCNetworkDelegate>
+@interface ViewController ()<TJNetworkDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *button1;
 @property (weak, nonatomic) IBOutlet UIButton *button2;
 
@@ -24,27 +24,27 @@
     
     [self networkConfig];
     
-    [self.button1 setTitle:NSStringFromClass([XCBaseRequestTestController class]) forState:UIControlStateNormal];
+    [self.button1 setTitle:NSStringFromClass([TJBaseRequestTestController class]) forState:UIControlStateNormal];
     
-    [self.button2 setTitle:NSStringFromClass([XCRequestTestController class]) forState:UIControlStateNormal];
+    [self.button2 setTitle:NSStringFromClass([TJRequestTestController class]) forState:UIControlStateNormal];
 }
 
 - (void)networkConfig {
-    [[XCNetworkConfig shareObject] setDelegate:self];
-    [[XCNetworkConfig shareObject] setResponseSerializer:XCJSONResponseSerializer];
+    [[TJNetworkConfig shareObject] setDelegate:self];
+    [[TJNetworkConfig shareObject] setResponseSerializer:TJJSONResponseSerializer];
 }
 
 
-#pragma mark --------------- XCNetworkDelegate
+#pragma mark --------------- TJNetworkDelegate
 
-- (void)requestWillStart:(XCBaseRequest *)request
+- (void)requestWillStart:(TJBaseRequest *)request
 {
     NSURL *baseURL = [NSURL URLWithString:@"https://httpbin.org/"];
-    request.url = [XCNetworkTools URLWithString:request.url relativeToURL:baseURL];
+    request.url = [TJNetworkTools URLWithString:request.url relativeToURL:baseURL];
     NSLog(@"请求即将开始");
 }
 
-- (void)requestWillStop:(XCBaseRequest *)request
+- (void)requestWillStop:(TJBaseRequest *)request
 {
     NSLog(@"请求即将结束");
 }

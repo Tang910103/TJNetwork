@@ -1,14 +1,14 @@
 //
 //  ViewController.h
-//  XCNetworkManager
+//  TJNetworkManager
 //  Created by Tang杰 on 2019/3/8.
 //  Copyright © 2019 Tang杰. All rights reserved.
 //
 
-#import "XCBaseRequestTestController.h"
+#import "TJBaseRequestTestController.h"
 
 
-@interface XCRequestTestController : XCBaseRequestTestController
+@interface TJRequestTestController : TJBaseRequestTestController
 
 
 @end

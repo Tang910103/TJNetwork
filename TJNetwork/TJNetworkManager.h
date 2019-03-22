@@ -1,17 +1,17 @@
 //
-//  XCNetworkManager.h
-//  XCNetworking
+//  TJNetworkManager.h
+//  TJNetworking
 //  Created by Tang杰 on 2019/3/11.
 //  Copyright © 2019 Tang杰. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@class XCBaseRequest;
+@class TJBaseRequest;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XCNetworkManager : NSObject
+@interface TJNetworkManager : NSObject
 #pragma mark ------------ 属性
 
 #pragma mark ------------ 类方法
@@ -19,9 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sharedManager;
 
 /// 添加会话请求并启动会话
-- (void)addRequest:(XCBaseRequest *)request;
+- (void)addRequest:(TJBaseRequest *)request;
 /// 取消会话请求
-- (void)cancelRequest:(XCBaseRequest *)request;
+- (void)cancelRequest:(TJBaseRequest *)request;
 /// 取消所有会话请求
 - (void)cancelAllRequests;
 

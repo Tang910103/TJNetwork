@@ -1,28 +1,28 @@
 //
 //  ViewController.m
-//  XCNetworkManager
+//  TJNetworkManager
 //  Created by Tang杰 on 2019/3/8.
 //  Copyright © 2019 Tang杰. All rights reserved.
 //
 
-#import "XCRequestTestController.h"
-#import "XCNetwork.h"
+#import "TJRequestTestController.h"
+#import "TJNetwork.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
 #import "DetailViewController.h"
 
 
-@interface XCRequestTestController ()<UITableViewDelegate,UITableViewDataSource,XCNetworkDelegate>
+@interface TJRequestTestController ()<UITableViewDelegate,UITableViewDataSource,TJNetworkDelegate>
 {
 //    NSMutableArray *_myTestMethods;
 //    NSString *_selectedMethodName;
-//    XCRequest *_currentRequest;
+//    TJRequest *_currentRequest;
 }
 @property (nonatomic, strong) UITableView *tableView;
 
 @end
 
-@implementation XCRequestTestController
+@implementation TJRequestTestController
 
 
 - (void)viewDidLoad {
@@ -47,35 +47,35 @@
 //}
 //
 //- (void)testGet {
-//    _currentRequest = XCRequest.get(@"get", nil)
+//    _currentRequest = TJRequest.get(@"get", nil)
 //    .jsonResponse(self.requestComplete);
 //}
 //
 //- (void)testPost {
-//    _currentRequest = XCRequest.post(@"post", nil)
-//    .requestWillStop(^(XCRequest *request) {
+//    _currentRequest = TJRequest.post(@"post", nil)
+//    .requestWillStop(^(TJRequest *request) {
 //        NSLog(@"-=-=-=-=-=-==-=-=-=-");
 //    }).jsonResponse(self.requestComplete);
 //}
 //- (void)testCacheResult {
-//    _currentRequest = XCRequest.get(@"get", nil)
+//    _currentRequest = TJRequest.get(@"get", nil)
 //    .jsonResponse(self.requestComplete)
-//    .readCache(^(XCRequest *r){
+//    .readCache(^(TJRequest *r){
 //        NSLog(@"%@",r.jsonResult);
 //        return YES;
 //    });
 //}
 //
 //- (void)testDelete {
-//    _currentRequest = XCRequest.delet(@"delete", nil)
-//    .jsonResponse(self.requestComplete).readCache(^(XCRequest *r){
+//    _currentRequest = TJRequest.delet(@"delete", nil)
+//    .jsonResponse(self.requestComplete).readCache(^(TJRequest *r){
 //        return YES;
 //    });
 //}
 //
 //- (void)testTimerout {
-//    _currentRequest = XCRequest.request(^(XCRequest *re) {
-//        re.requestMethod = XCRequestMethodGET;
+//    _currentRequest = TJRequest.request(^(TJRequest *re) {
+//        re.requestMethod = TJRequestMethodGET;
 //        re.timeoutInterval = 1;
 //        re.url = @"get";
 //    }).dataResponse(self.requestComplete);
@@ -89,14 +89,14 @@
 //        [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
 //    }
 //    
-////    _currentRequest = XCRequest.download(@"http://wind4app-bdys.oss-cn-hangzhou.aliyuncs.com/CMD_MarkDown.zip", nil,@{@"kkk":@"999"}, ^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+////    _currentRequest = TJRequest.download(@"http://wind4app-bdys.oss-cn-hangzhou.aliyuncs.com/CMD_MarkDown.zip", nil,@{@"kkk":@"999"}, ^NSURL *(NSURL *targetPath, NSURLResponse *response) {
 ////        return [NSURL fileURLWithPath:[filePath stringByAppendingPathExtension:response.suggestedFilename.pathExtension] isDirectory:NO];
 ////    })
 ////    .jsonResponse(self.requestComplete);
 //}
 //
-//- (void(^)(XCRequest *))requestComplete {
-//    return ^(XCRequest *request){
+//- (void(^)(TJRequest *))requestComplete {
+//    return ^(TJRequest *request){
 //        if (request.error) {
 //            NSLog(@"\n请求失败：%s\n%@",__FUNCTION__,request.error);
 //        } else {
@@ -105,16 +105,16 @@
 //    };
 //}
 //
-//#pragma mark --------------- XCNetworkDelegate
+//#pragma mark --------------- TJNetworkDelegate
 //
-//- (void)requestWillStart:(XCRequest *)request
+//- (void)requestWillStart:(TJRequest *)request
 //{
 //    NSURL *baseURL = [NSURL URLWithString:@"https://httpbin.org/"];
-//    request.url = [XCNetworkTools URLWithString:request.url relativeToURL:baseURL];
+//    request.url = [TJNetworkTools URLWithString:request.url relativeToURL:baseURL];
 //    NSLog(@"请求即将开始");
 //}
 //
-//- (void)requestWillStop:(XCRequest *)request
+//- (void)requestWillStop:(TJRequest *)request
 //{
 //    NSLog(@"请求即将结束");
 //}

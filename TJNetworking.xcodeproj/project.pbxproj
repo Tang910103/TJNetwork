@@ -9,21 +9,22 @@
 /* Begin PBXBuildFile section */
 		76782C9E3EAC11BAFF6DB276 /* libPods-XCNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D902138CE717A7DF3CEA143 /* libPods-XCNetworking.a */; };
 		A5006803223F28E500591F94 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5006802223F28E500591F94 /* Default-568h@2x.png */; };
-		A529D1A8223B57D400770592 /* XCNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A529D1A2223B57D400770592 /* XCNetworkManager.m */; };
-		A529D1AA223B57D400770592 /* XCNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A529D1A7223B57D400770592 /* XCNetworkConfig.m */; };
-		A529D1AE223B58FD00770592 /* XCNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = A529D1AD223B58FD00770592 /* XCNetworkTools.m */; };
-		A52FB7502243292700272FBF /* XCBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A52FB74F2243292700272FBF /* XCBaseRequest.m */; };
-		A52FB75322432AC700272FBF /* XCBaseRequestTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = A52FB75222432AC700272FBF /* XCBaseRequestTestController.m */; };
+		A529D1A8223B57D400770592 /* TJNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A529D1A2223B57D400770592 /* TJNetworkManager.m */; };
+		A529D1AA223B57D400770592 /* TJNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A529D1A7223B57D400770592 /* TJNetworkConfig.m */; };
+		A529D1AE223B58FD00770592 /* TJNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = A529D1AD223B58FD00770592 /* TJNetworkTools.m */; };
+		A52FB7502243292700272FBF /* TJBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A52FB74F2243292700272FBF /* TJBaseRequest.m */; };
+		A52FB75322432AC700272FBF /* TJBaseRequestTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = A52FB75222432AC700272FBF /* TJBaseRequestTestController.m */; };
 		A52FB75622432F3200272FBF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A52FB75522432F3200272FBF /* ViewController.m */; };
-		A536DF9E2244C67800C0FFEE /* XCRequestTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = A536DF9D2244C67800C0FFEE /* XCRequestTestController.m */; };
-		A536DFA12244C6BF00C0FFEE /* XCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A536DF9F2244C6BF00C0FFEE /* XCRequest.m */; };
+		A536DF9E2244C67800C0FFEE /* TJRequestTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = A536DF9D2244C67800C0FFEE /* TJRequestTestController.m */; };
+		A536DFA12244C6BF00C0FFEE /* TJRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A536DF9F2244C6BF00C0FFEE /* TJRequest.m */; };
 		A5B9978C223B917E00D5EDD6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B9978B223B917E00D5EDD6 /* DetailViewController.m */; };
 		A5C260022232579F00EBFB3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C260012232579F00EBFB3D /* AppDelegate.m */; };
 		A5C260082232579F00EBFB3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C260062232579F00EBFB3D /* Main.storyboard */; };
 		A5C2600A223257A100EBFB3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C26009223257A100EBFB3D /* Assets.xcassets */; };
 		A5C2600D223257A100EBFB3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C2600B223257A100EBFB3D /* LaunchScreen.storyboard */; };
 		A5C26010223257A100EBFB3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C2600F223257A100EBFB3D /* main.m */; };
-		A5C509B6223FF4B90063053A /* XCNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C509B5223FF4B90063053A /* XCNetworkCache.m */; };
+		A5C509B6223FF4B90063053A /* TJNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C509B5223FF4B90063053A /* TJNetworkCache.m */; };
+		F01157A97F4AFDAE2A239777 /* libPods-TJNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C0BED62A1C7C41EC83F2C6 /* libPods-TJNetworking.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,26 +35,26 @@
 		5DADE6F6AB45D1A82A91EDB9 /* Pods-XCNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCNetworking/Pods-XCNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 		70C0BED62A1C7C41EC83F2C6 /* libPods-TJNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TJNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5006802223F28E500591F94 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		A529D1A2223B57D400770592 /* XCNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCNetworkManager.m; sourceTree = "<group>"; };
-		A529D1A4223B57D400770592 /* XCNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCNetworkConfig.h; sourceTree = "<group>"; };
-		A529D1A5223B57D400770592 /* XCNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCNetworkManager.h; sourceTree = "<group>"; };
-		A529D1A7223B57D400770592 /* XCNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCNetworkConfig.m; sourceTree = "<group>"; };
-		A529D1AB223B582700770592 /* XCNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCNetwork.h; sourceTree = "<group>"; };
-		A529D1AC223B58FC00770592 /* XCNetworkTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCNetworkTools.h; sourceTree = "<group>"; };
-		A529D1AD223B58FD00770592 /* XCNetworkTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCNetworkTools.m; sourceTree = "<group>"; };
-		A52FB74E2243292700272FBF /* XCBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCBaseRequest.h; sourceTree = "<group>"; };
-		A52FB74F2243292700272FBF /* XCBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCBaseRequest.m; sourceTree = "<group>"; };
-		A52FB75122432AC700272FBF /* XCBaseRequestTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCBaseRequestTestController.h; sourceTree = "<group>"; };
-		A52FB75222432AC700272FBF /* XCBaseRequestTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCBaseRequestTestController.m; sourceTree = "<group>"; };
+		A529D1A2223B57D400770592 /* TJNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJNetworkManager.m; sourceTree = "<group>"; };
+		A529D1A4223B57D400770592 /* TJNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJNetworkConfig.h; sourceTree = "<group>"; };
+		A529D1A5223B57D400770592 /* TJNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJNetworkManager.h; sourceTree = "<group>"; };
+		A529D1A7223B57D400770592 /* TJNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJNetworkConfig.m; sourceTree = "<group>"; };
+		A529D1AB223B582700770592 /* TJNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJNetwork.h; sourceTree = "<group>"; };
+		A529D1AC223B58FC00770592 /* TJNetworkTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJNetworkTools.h; sourceTree = "<group>"; };
+		A529D1AD223B58FD00770592 /* TJNetworkTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TJNetworkTools.m; sourceTree = "<group>"; };
+		A52FB74E2243292700272FBF /* TJBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJBaseRequest.h; sourceTree = "<group>"; };
+		A52FB74F2243292700272FBF /* TJBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TJBaseRequest.m; sourceTree = "<group>"; };
+		A52FB75122432AC700272FBF /* TJBaseRequestTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJBaseRequestTestController.h; sourceTree = "<group>"; };
+		A52FB75222432AC700272FBF /* TJBaseRequestTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TJBaseRequestTestController.m; sourceTree = "<group>"; };
 		A52FB75422432F3200272FBF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A52FB75522432F3200272FBF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A536DF9C2244C67700C0FFEE /* XCRequestTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCRequestTestController.h; sourceTree = "<group>"; };
-		A536DF9D2244C67800C0FFEE /* XCRequestTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCRequestTestController.m; sourceTree = "<group>"; };
-		A536DF9F2244C6BF00C0FFEE /* XCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCRequest.m; sourceTree = "<group>"; };
-		A536DFA02244C6BF00C0FFEE /* XCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCRequest.h; sourceTree = "<group>"; };
+		A536DF9C2244C67700C0FFEE /* TJRequestTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRequestTestController.h; sourceTree = "<group>"; };
+		A536DF9D2244C67800C0FFEE /* TJRequestTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRequestTestController.m; sourceTree = "<group>"; };
+		A536DF9F2244C6BF00C0FFEE /* TJRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRequest.m; sourceTree = "<group>"; };
+		A536DFA02244C6BF00C0FFEE /* TJRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRequest.h; sourceTree = "<group>"; };
 		A5B9978A223B917E00D5EDD6 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		A5B9978B223B917E00D5EDD6 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		A5C25FFD2232579F00EBFB3D /* XCNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XCNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C25FFD2232579F00EBFB3D /* TJNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TJNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C260002232579F00EBFB3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A5C260012232579F00EBFB3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A5C260072232579F00EBFB3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,9 +62,9 @@
 		A5C2600C223257A100EBFB3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5C2600E223257A100EBFB3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5C2600F223257A100EBFB3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A5C509B4223FF4B90063053A /* XCNetworkCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCNetworkCache.h; sourceTree = "<group>"; };
-		A5C509B5223FF4B90063053A /* XCNetworkCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCNetworkCache.m; sourceTree = "<group>"; };
-		A5CDB6FD22449CB8004559B2 /* XCBaseRequestProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCBaseRequestProtocol.h; sourceTree = "<group>"; };
+		A5C509B4223FF4B90063053A /* TJNetworkCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJNetworkCache.h; sourceTree = "<group>"; };
+		A5C509B5223FF4B90063053A /* TJNetworkCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TJNetworkCache.m; sourceTree = "<group>"; };
+		A5CDB6FD22449CB8004559B2 /* TJBaseRequestProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJBaseRequestProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,39 +73,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				76782C9E3EAC11BAFF6DB276 /* libPods-XCNetworking.a in Frameworks */,
+				F01157A97F4AFDAE2A239777 /* libPods-TJNetworking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A529D1A1223B57D400770592 /* XCNetwork */ = {
+		A529D1A1223B57D400770592 /* TJNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				A529D1A5223B57D400770592 /* XCNetworkManager.h */,
-				A529D1A2223B57D400770592 /* XCNetworkManager.m */,
-				A529D1A4223B57D400770592 /* XCNetworkConfig.h */,
-				A529D1A7223B57D400770592 /* XCNetworkConfig.m */,
-				A5C509B4223FF4B90063053A /* XCNetworkCache.h */,
-				A5C509B5223FF4B90063053A /* XCNetworkCache.m */,
-				A52FB74E2243292700272FBF /* XCBaseRequest.h */,
-				A52FB74F2243292700272FBF /* XCBaseRequest.m */,
-				A5CDB6FD22449CB8004559B2 /* XCBaseRequestProtocol.h */,
-				A536DFA02244C6BF00C0FFEE /* XCRequest.h */,
-				A536DF9F2244C6BF00C0FFEE /* XCRequest.m */,
-				A529D1AB223B582700770592 /* XCNetwork.h */,
-				A529D1AC223B58FC00770592 /* XCNetworkTools.h */,
-				A529D1AD223B58FD00770592 /* XCNetworkTools.m */,
+				A529D1A5223B57D400770592 /* TJNetworkManager.h */,
+				A529D1A2223B57D400770592 /* TJNetworkManager.m */,
+				A529D1A4223B57D400770592 /* TJNetworkConfig.h */,
+				A529D1A7223B57D400770592 /* TJNetworkConfig.m */,
+				A5C509B4223FF4B90063053A /* TJNetworkCache.h */,
+				A5C509B5223FF4B90063053A /* TJNetworkCache.m */,
+				A52FB74E2243292700272FBF /* TJBaseRequest.h */,
+				A52FB74F2243292700272FBF /* TJBaseRequest.m */,
+				A5CDB6FD22449CB8004559B2 /* TJBaseRequestProtocol.h */,
+				A536DFA02244C6BF00C0FFEE /* TJRequest.h */,
+				A536DF9F2244C6BF00C0FFEE /* TJRequest.m */,
+				A529D1AB223B582700770592 /* TJNetwork.h */,
+				A529D1AC223B58FC00770592 /* TJNetworkTools.h */,
+				A529D1AD223B58FD00770592 /* TJNetworkTools.m */,
 			);
-			path = XCNetwork;
+			path = TJNetwork;
 			sourceTree = "<group>";
 		};
 		A5C25FF42232579F00EBFB3D = {
 			isa = PBXGroup;
 			children = (
 				A5006802223F28E500591F94 /* Default-568h@2x.png */,
-				A529D1A1223B57D400770592 /* XCNetwork */,
-				A5C25FFF2232579F00EBFB3D /* XCNetworkDemo */,
+				A529D1A1223B57D400770592 /* TJNetwork */,
+				A5C25FFF2232579F00EBFB3D /* TJNetworkDemo */,
 				A5C25FFE2232579F00EBFB3D /* Products */,
 				B962DCC6919371A9E92BCBE9 /* Pods */,
 				D83B8EFB1A43F966C5378135 /* Frameworks */,
@@ -114,22 +116,22 @@
 		A5C25FFE2232579F00EBFB3D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A5C25FFD2232579F00EBFB3D /* XCNetworking.app */,
+				A5C25FFD2232579F00EBFB3D /* TJNetworking.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A5C25FFF2232579F00EBFB3D /* XCNetworkDemo */ = {
+		A5C25FFF2232579F00EBFB3D /* TJNetworkDemo */ = {
 			isa = PBXGroup;
 			children = (
 				A5C260002232579F00EBFB3D /* AppDelegate.h */,
 				A5C260012232579F00EBFB3D /* AppDelegate.m */,
 				A52FB75422432F3200272FBF /* ViewController.h */,
 				A52FB75522432F3200272FBF /* ViewController.m */,
-				A536DF9C2244C67700C0FFEE /* XCRequestTestController.h */,
-				A536DF9D2244C67800C0FFEE /* XCRequestTestController.m */,
-				A52FB75122432AC700272FBF /* XCBaseRequestTestController.h */,
-				A52FB75222432AC700272FBF /* XCBaseRequestTestController.m */,
+				A536DF9C2244C67700C0FFEE /* TJRequestTestController.h */,
+				A536DF9D2244C67800C0FFEE /* TJRequestTestController.m */,
+				A52FB75122432AC700272FBF /* TJBaseRequestTestController.h */,
+				A52FB75222432AC700272FBF /* TJBaseRequestTestController.m */,
 				A5B9978A223B917E00D5EDD6 /* DetailViewController.h */,
 				A5B9978B223B917E00D5EDD6 /* DetailViewController.m */,
 				A5C260062232579F00EBFB3D /* Main.storyboard */,
@@ -138,7 +140,7 @@
 				A5C2600E223257A100EBFB3D /* Info.plist */,
 				A5C2600F223257A100EBFB3D /* main.m */,
 			);
-			path = XCNetworkDemo;
+			path = TJNetworkDemo;
 			sourceTree = "<group>";
 		};
 		B962DCC6919371A9E92BCBE9 /* Pods */ = {
@@ -164,9 +166,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A5C25FFC2232579F00EBFB3D /* XCNetworking */ = {
+		A5C25FFC2232579F00EBFB3D /* TJNetworking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A5C26013223257A100EBFB3D /* Build configuration list for PBXNativeTarget "XCNetworking" */;
+			buildConfigurationList = A5C26013223257A100EBFB3D /* Build configuration list for PBXNativeTarget "TJNetworking" */;
 			buildPhases = (
 				5234D1DB215517A5F0301AB6 /* [CP] Check Pods Manifest.lock */,
 				A5C25FF92232579F00EBFB3D /* Sources */,
@@ -177,9 +179,9 @@
 			);
 			dependencies = (
 			);
-			name = XCNetworking;
+			name = TJNetworking;
 			productName = TJNetworkManager;
-			productReference = A5C25FFD2232579F00EBFB3D /* XCNetworking.app */;
+			productReference = A5C25FFD2232579F00EBFB3D /* TJNetworking.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -201,7 +203,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A5C25FF82232579F00EBFB3D /* Build configuration list for PBXProject "XCNetworking" */;
+			buildConfigurationList = A5C25FF82232579F00EBFB3D /* Build configuration list for PBXProject "TJNetworking" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -214,7 +216,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A5C25FFC2232579F00EBFB3D /* XCNetworking */,
+				A5C25FFC2232579F00EBFB3D /* TJNetworking */,
 			);
 		};
 /* End PBXProject section */
@@ -245,7 +247,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-XCNetworking-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TJNetworking-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -259,18 +261,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A529D1AE223B58FD00770592 /* XCNetworkTools.m in Sources */,
-				A529D1AA223B57D400770592 /* XCNetworkConfig.m in Sources */,
-				A52FB7502243292700272FBF /* XCBaseRequest.m in Sources */,
+				A529D1AE223B58FD00770592 /* TJNetworkTools.m in Sources */,
+				A529D1AA223B57D400770592 /* TJNetworkConfig.m in Sources */,
+				A52FB7502243292700272FBF /* TJBaseRequest.m in Sources */,
 				A5B9978C223B917E00D5EDD6 /* DetailViewController.m in Sources */,
-				A536DF9E2244C67800C0FFEE /* XCRequestTestController.m in Sources */,
-				A529D1A8223B57D400770592 /* XCNetworkManager.m in Sources */,
+				A536DF9E2244C67800C0FFEE /* TJRequestTestController.m in Sources */,
+				A529D1A8223B57D400770592 /* TJNetworkManager.m in Sources */,
 				A52FB75622432F3200272FBF /* ViewController.m in Sources */,
 				A5C26010223257A100EBFB3D /* main.m in Sources */,
 				A5C260022232579F00EBFB3D /* AppDelegate.m in Sources */,
-				A52FB75322432AC700272FBF /* XCBaseRequestTestController.m in Sources */,
-				A536DFA12244C6BF00C0FFEE /* XCRequest.m in Sources */,
-				A5C509B6223FF4B90063053A /* XCNetworkCache.m in Sources */,
+				A52FB75322432AC700272FBF /* TJBaseRequestTestController.m in Sources */,
+				A536DFA12244C6BF00C0FFEE /* TJRequest.m in Sources */,
+				A5C509B6223FF4B90063053A /* TJNetworkCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,15 +414,15 @@
 		};
 		A5C26014223257A100EBFB3D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DADE6F6AB45D1A82A91EDB9 /* Pods-XCNetworking.debug.xcconfig */;
+			baseConfigurationReference = 2B255BEED14A93743E0731B7 /* Pods-TJNetworking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BDKEPMWR2;
-				INFOPLIST_FILE = XCNetworkDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INFOPLIST_FILE = TJNetworkDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,15 +436,15 @@
 		};
 		A5C26015223257A100EBFB3D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C130F59CD38359383B485BF /* Pods-XCNetworking.release.xcconfig */;
+			baseConfigurationReference = 169B37CA6054920B9E44683C /* Pods-TJNetworking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BDKEPMWR2;
-				INFOPLIST_FILE = XCNetworkDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				INFOPLIST_FILE = TJNetworkDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +459,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A5C25FF82232579F00EBFB3D /* Build configuration list for PBXProject "XCNetworking" */ = {
+		A5C25FF82232579F00EBFB3D /* Build configuration list for PBXProject "TJNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A5C26011223257A100EBFB3D /* Debug */,
@@ -466,7 +468,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A5C26013223257A100EBFB3D /* Build configuration list for PBXNativeTarget "XCNetworking" */ = {
+		A5C26013223257A100EBFB3D /* Build configuration list for PBXNativeTarget "TJNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A5C26014223257A100EBFB3D /* Debug */,
