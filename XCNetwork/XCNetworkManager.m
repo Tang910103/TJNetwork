@@ -6,7 +6,7 @@
 //
 
 #import "XCNetworkManager.h"
-#import <AFNetworking.h>
+#import <AFNetworking/AFNetworking.h>
 #import "XCBaseRequest.h"
 #import "XCNetworkConfig.h"
 #import "XCNetworkCache.h"
