@@ -41,7 +41,7 @@ typedef NS_ENUM(NSUInteger, TJResponseSerializer) {
  User-Agent : '项目标示和设备信息',TJNetworking/0.0.1 (iPhone; iOS 12.0; Scale/2.00),
  Accept-Language : '系统语言',zh-Hans-CN;q=1,
  */
-@property (nonatomic, strong) NSDictionary <NSString *, NSString *> *requestHeaders;
+@property (nonatomic, strong) NSDictionary <NSString *, NSString *> * _Nullable requestHeaders;
 
 @end
 

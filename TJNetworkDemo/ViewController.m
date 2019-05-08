@@ -37,11 +37,13 @@
 
 #pragma mark --------------- TJNetworkDelegate
 
-- (void)requestWillStart:(TJBaseRequest *)request
+- (BOOL)requestWillStart:(TJBaseRequest *)request
 {
     NSURL *baseURL = [NSURL URLWithString:@"https://httpbin.org/"];
     request.url = [TJNetworkTools URLWithString:request.url relativeToURL:baseURL];
+
     NSLog(@"请求即将开始");
+    return request.requestHeaders;
 }
 
 - (void)requestWillStop:(TJBaseRequest *)request

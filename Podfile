@@ -8,7 +8,7 @@ target 'TJNetworking' do
   # use_frameworks!
 
   # Pods for TJNetworking
-  pod 'AFNetworking','3.2.1'
-  pod 'YYCache','1.0.4'
+  pod 'AFNetworking'
+  pod 'YYCache'
 
 end

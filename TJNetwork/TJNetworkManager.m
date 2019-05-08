@@ -69,7 +69,8 @@
 - (void)addRequest:(TJBaseRequest *)request
 {
     NSParameterAssert(request != nil);
-    [self requestWillStart:request];
+    if (![self requestWillStart:request]) return;
+    
     [self setupRequestSerializer:request];
     [self sessionTaskByRequest:request];
     
@@ -122,6 +123,9 @@
         [requestSerializer setAuthorizationHeaderFieldWithUsername:request.username password:request.password];
     }
     requestSerializer.timeoutInterval = request.timeoutInterval;
+    [request.requestHeaders enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull obj, BOOL * _Nonnull stop) {
+        [requestSerializer setValue:obj forHTTPHeaderField:key];
+    }];
     _manager.requestSerializer = requestSerializer;
 }
 
@@ -258,10 +262,11 @@
 }
 
 /** 即将开始请求 */
-- (void)requestWillStart:(TJBaseRequest *)request {
+- (BOOL)requestWillStart:(TJBaseRequest *)request {
     if ([[TJNetworkConfig shareObject].delegate respondsToSelector:@selector(requestWillStart:)]) {
-        [TJNetworkConfig.shareObject.delegate requestWillStart:request];
+        return [TJNetworkConfig.shareObject.delegate requestWillStart:request];
     }
+    return YES;
 }
 
 

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "TJNetwork"
-    s.version      = "0.0.1"
+    s.version      = "0.0.2"
     s.summary      = "AFNetworking二次封装，内部依赖了AFNetworking，YYCache"
     s.description  = "AFNetworking二次封装，内部依赖了AFNetworking，YYCache"
     s.homepage     = "https://github.com/Tang910103"

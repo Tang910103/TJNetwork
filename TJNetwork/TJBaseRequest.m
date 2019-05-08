@@ -51,12 +51,16 @@ requestHeaders = _requestHeaders;
     return [[self alloc] init];
 }
 
+- (void)startRequest{
+    [[TJNetworkManager sharedManager] addRequest:self];
+}
+
 - (void)startRequestWithCompleteBlock:(TJBaseRequestCompletionBlock)complete
 {
-    [[TJNetworkManager sharedManager] addRequest:self];
     if (complete) {
         self.complete = complete;
     }
+    [self startRequest];
 }
 
 - (void)cancel

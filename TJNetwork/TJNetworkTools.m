@@ -11,7 +11,7 @@
 
 
 @implementation TJNetworkTools
-+ (NSString *)URLWithString:(nullable NSString *)URLString relativeToURL:(nullable NSURL *)baseURL
++ (NSString *)URLWithString:(NSString *)URLString relativeToURL:(NSURL *)baseURL
 {
     NSURL *temp = [NSURL URLWithString:URLString];
     //        如果URLString是一个完整的URL则不需要拼接baseUrl

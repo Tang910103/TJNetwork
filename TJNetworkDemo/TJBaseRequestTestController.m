@@ -100,6 +100,8 @@ NSMutableArray *getTestMethods(Class class)
 - (void)testGet {
     _currentRequest = [[TJBaseRequest alloc] init];
     _currentRequest.url = @"get";
+    _currentRequest.requestHeaders = [NSDictionary dictionaryWithObjectsAndKeys:@"45678s9dfdsf789a0",@"token", nil];
+
     [_currentRequest startRequestWithCompleteBlock:self.requestComplete];
 }
 

@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark ------------ 属性
 
 #pragma mark ------------ 类方法
-+ (NSString *)URLWithString:(nullable NSString *)URLString relativeToURL:(nullable NSURL *)baseURL;
++ (NSString *)URLWithString:(NSString *)URLString relativeToURL:(NSURL *)baseURL;
 
 + (NSString *)stringToMD5:(NSString *)str;
 
