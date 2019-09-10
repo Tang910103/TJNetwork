@@ -10,23 +10,82 @@
 @class TJBaseRequest;
 
 @interface TJNetworkCache : NSObject
-#pragma mark ------------ 属性
 
-#pragma mark ------------ 类方法
-/** 缓存请求结果, block != nil异步执行，block == nil同步执行*/
+#pragma mark --------------- Propertys
+/// ---------------------------------------------------
+/// @name Propertys
+/// ---------------------------------------------------
+
+#pragma mark ------------ Class Methods
+/// ---------------------------------------------------
+/// @name Class Methods
+/// ---------------------------------------------------
+
+/**
+ 缓存请求结果, block != nil异步执行，block == nil同步执行
+
+ @param request 需要缓存的请求对象 TJBaseRequest
+ @param block 完成回调
+ */
 + (void)cacheDataWithRequest:(TJBaseRequest *)request withBlock:(void (^)(void))block;
-/** 异步读取缓存请求, block != nil异步执行，block == nil同步执行*/
-+ (id)readCacheWithRequest:(TJBaseRequest *)request withBlock:(void(^)(id result))block;
-/** 异步删除指定请求缓存 , block != nil异步执行，block == nil同步执行*/
-+ (void)removeCacheWithRequest:(TJBaseRequest *)request withBlock:(void(^)(id result))block;
-/** 清空所有请求缓存, block != nil异步执行，block == nil同步执行*/
-+ (void)removeAllRequestsWithBlock:(void(^)(void))block;
-/** 请求是否已经缓存, block != nil异步执行，block == nil同步执行*/
-+ (BOOL)containsRequestForRequest:(TJBaseRequest *)request withBlock:(void (^)(NSString *, BOOL))block;
 
-/** 获取缓存key */
+/**
+ 异步读取缓存请求
+
+ @param request 需要读取缓存的请求对象 TJBaseRequest
+ @return 缓存结果
+ */
++ (id)readCacheWithRequest:(TJBaseRequest *)request;
+
+/**
+ 异步读取缓存请求, 异步执行
+
+ @param request 需要读取缓存的请求对象 TJBaseRequest
+ @param block 完成回调
+ */
++ (void)readCacheWithRequest:(TJBaseRequest *)request withBlock:(void(^)(NSString *key, id<NSCoding> object))block;
+
+/**
+ 异步删除指定请求缓存 , block != nil异步执行，block == nil同步执行
+
+ @param request 需要清空缓存的请求对象 TJBaseRequest
+ @param block 完成回调
+ */
++ (void)removeCacheWithRequest:(TJBaseRequest *)request withBlock:(void(^)(NSString *key))block;
+
+/**
+ 清空所有请求缓存, block != nil异步执行，block == nil同步执行
+
+ @param block 清空完成回调
+ */
++ (void)removeAllRequestsWithBlock:(void(^)(void))block;
+
+/**
+ 请求是否存在缓存
+ */
++ (BOOL)containsObjectForKey:(NSString *)key;
+
+/**
+ 请求是否存在缓存, 异步执行
+
+ @param request 查找缓存的请求体 TJBaseRequest
+ @param block 获取缓存回调
+ */
++ (void)containsRequestForRequest:(TJBaseRequest *)request withBlock:( void(^)(NSString *key, BOOL contains))block;
+
+/**
+ 获取缓存key
+ 
+ @param request 请求体 TJBaseRequest
+ */
 + (NSString *)cacheKeyWithRequest:(TJBaseRequest *)request;
-#pragma mark ------------ 实例方法
+
+
+#pragma mark ------------ Instance Methods
+/// ---------------------------------------------------
+/// @name Instance Methods
+/// ---------------------------------------------------
+
 @end
 
 

@@ -137,7 +137,7 @@ NSMutableArray *getTestMethods(Class class)
 }
 
 - (void)testDownload {
-    _currentRequest = [TJBaseRequest download:@"http://wind4app-bdys.oss-cn-hangzhou.aliyuncs.com/CMD_MarkDown.zip" parameter:nil resumePath:@"/Users/tangjie/Desktop/001" downloadCachePath:^NSString *(NSURLResponse *response) {
+    [TJBaseRequest download:@"http://wind4app-bdys.oss-cn-hangzhou.aliyuncs.com/CMD_MarkDown.zip" parameter:nil resumePath:@"/Users/tangjie/Desktop/001" downloadCachePath:^NSString *(NSURLResponse *response) {
         return [@"/Users/tangjie/Downloads" stringByAppendingPathComponent:response.suggestedFilename];
     } progress:nil complete:self.requestComplete];
 }
@@ -152,7 +152,6 @@ NSMutableArray *getTestMethods(Class class)
         }
     };
 }
-
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>TJNetworkCache Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">TJNetworking </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Xin Chao</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/cacheDataWithRequest:withBlock:">+ cacheDataWithRequest:withBlock:</option>
+		
+		<option value="//api/name/cacheKeyWithRequest:">+ cacheKeyWithRequest:</option>
+		
+		<option value="//api/name/containsObjectForKey:">+ containsObjectForKey:</option>
+		
+		<option value="//api/name/containsRequestForRequest:withBlock:">+ containsRequestForRequest:withBlock:</option>
+		
+		<option value="//api/name/readCacheWithRequest:">+ readCacheWithRequest:</option>
+		
+		<option value="//api/name/readCacheWithRequest:withBlock:">+ readCacheWithRequest:withBlock:</option>
+		
+		<option value="//api/name/removeAllRequestsWithBlock:">+ removeAllRequestsWithBlock:</option>
+		
+		<option value="//api/name/removeCacheWithRequest:withBlock:">+ removeCacheWithRequest:withBlock:</option>
+		
+	</optgroup>
+	
+
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">TJNetworkCache Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>TJNetworkCache.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Class Methods" name="task_Class Methods"></a>
+						
+<h2 class="task-title">Class Methods</h2>
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/cacheDataWithRequest:withBlock:" title="cacheDataWithRequest:withBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cacheDataWithRequest:withBlock:">+&nbsp;cacheDataWithRequest:withBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>缓存请求结果, block != nil异步执行，block == nil同步执行</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)cacheDataWithRequest:(TJBaseRequest *)<em>request</em> withBlock:(void ( ^ ) ( void ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>request</code></th>
+						<td><p>需要缓存的请求对象 <a href="../Classes/TJBaseRequest.html">TJBaseRequest</a></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>完成回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJNetworkCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/readCacheWithRequest:" title="readCacheWithRequest:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/readCacheWithRequest:">+&nbsp;readCacheWithRequest:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>异步读取缓存请求</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (id)readCacheWithRequest:(TJBaseRequest *)<em>request</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>request</code></th>
+						<td><p>需要读取缓存的请求对象 <a href="../Classes/TJBaseRequest.html">TJBaseRequest</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>缓存结果</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJNetworkCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/readCacheWithRequest:withBlock:" title="readCacheWithRequest:withBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/readCacheWithRequest:withBlock:">+&nbsp;readCacheWithRequest:withBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>异步读取缓存请求, 异步执行</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)readCacheWithRequest:(TJBaseRequest *)<em>request</em> withBlock:(void ( ^ ) ( NSString *key , id&lt;NSCoding&gt; object ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>request</code></th>
+						<td><p>需要读取缓存的请求对象 <a href="../Classes/TJBaseRequest.html">TJBaseRequest</a></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>完成回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJNetworkCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeCacheWithRequest:withBlock:" title="removeCacheWithRequest:withBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeCacheWithRequest:withBlock:">+&nbsp;removeCacheWithRequest:withBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>异步删除指定请求缓存 , block != nil异步执行，block == nil同步执行</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)removeCacheWithRequest:(TJBaseRequest *)<em>request</em> withBlock:(void ( ^ ) ( NSString *key ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>request</code></th>
+						<td><p>需要清空缓存的请求对象 <a href="../Classes/TJBaseRequest.html">TJBaseRequest</a></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>完成回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJNetworkCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeAllRequestsWithBlock:" title="removeAllRequestsWithBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeAllRequestsWithBlock:">+&nbsp;removeAllRequestsWithBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>清空所有请求缓存, block != nil异步执行，block == nil同步执行</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)removeAllRequestsWithBlock:(void ( ^ ) ( void ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>清空完成回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJNetworkCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/containsObjectForKey:" title="containsObjectForKey:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/containsObjectForKey:">+&nbsp;containsObjectForKey:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>请求是否存在缓存</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (BOOL)containsObjectForKey:(NSString *)<em>key</em></code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJNetworkCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/containsRequestForRequest:withBlock:" title="containsRequestForRequest:withBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/containsRequestForRequest:withBlock:">+&nbsp;containsRequestForRequest:withBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>请求是否存在缓存, 异步执行</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)containsRequestForRequest:(TJBaseRequest *)<em>request</em> withBlock:(void ( ^ ) ( NSString *key , BOOL contains ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>request</code></th>
+						<td><p>查找缓存的请求体 <a href="../Classes/TJBaseRequest.html">TJBaseRequest</a></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>获取缓存回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJNetworkCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cacheKeyWithRequest:" title="cacheKeyWithRequest:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cacheKeyWithRequest:">+&nbsp;cacheKeyWithRequest:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取缓存key</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (NSString *)cacheKeyWithRequest:(TJBaseRequest *)<em>request</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>request</code></th>
+						<td><p>请求体 <a href="../Classes/TJBaseRequest.html">TJBaseRequest</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJNetworkCache.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2019 Xin Chao. All rights reserved. Updated: 2019-09-10</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

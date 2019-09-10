@@ -8,10 +8,10 @@
 #ifndef TJNetwork_h
 #define TJNetwork_h
 
-//#import "TJRequest.h"
 #import "TJBaseRequest.h"
 #import "TJNetworkConfig.h"
 #import "TJNetworkManager.h"
 #import "TJNetworkTools.h"
+#import "TJNetworkCache.h"
 
 #endif /* TJNetwork_h */

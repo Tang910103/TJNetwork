@@ -39,8 +39,7 @@
 
 - (BOOL)requestWillStart:(TJBaseRequest *)request
 {
-    NSURL *baseURL = [NSURL URLWithString:@"https://httpbin.org/"];
-    request.url = [TJNetworkTools URLWithString:request.url relativeToURL:baseURL];
+    request.url = [TJNetworkTools URLWithPath:request.url basePath:@"https://httpbin.org/"];
 
     NSLog(@"请求即将开始");
     return request.requestHeaders;

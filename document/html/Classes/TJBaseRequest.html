@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>TJBaseRequest Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">TJNetworking </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Xin Chao</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/complete">complete</option>
+		
+		<option value="//api/name/constructingBodyBlock">constructingBodyBlock</option>
+		
+		<option value="//api/name/currentRequest">currentRequest</option>
+		
+		<option value="//api/name/downloadCachePathBlock">downloadCachePathBlock</option>
+		
+		<option value="//api/name/error">error</option>
+		
+		<option value="//api/name/originalRequest">originalRequest</option>
+		
+		<option value="//api/name/originalResult">originalResult</option>
+		
+		<option value="//api/name/parameter">parameter</option>
+		
+		<option value="//api/name/progress">progress</option>
+		
+		<option value="//api/name/requestMethod">requestMethod</option>
+		
+		<option value="//api/name/result">result</option>
+		
+		<option value="//api/name/resumePath">resumePath</option>
+		
+		<option value="//api/name/url">url</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/custom:complete:">+ custom:complete:</option>
+		
+		<option value="//api/name/delet:parameter:complete:">+ delet:parameter:complete:</option>
+		
+		<option value="//api/name/download:parameter:resumePath:downloadCachePath:progress:complete:">+ download:parameter:resumePath:downloadCachePath:progress:complete:</option>
+		
+		<option value="//api/name/get:parameter:complete:">+ get:parameter:complete:</option>
+		
+		<option value="//api/name/post:parameter:complete:">+ post:parameter:complete:</option>
+		
+		<option value="//api/name/request">+ request</option>
+		
+		<option value="//api/name/upload:parameter:bodyBlock:complete:">+ upload:parameter:bodyBlock:complete:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/cancel">- cancel</option>
+		
+		<option value="//api/name/readCache">- readCache</option>
+		
+		<option value="//api/name/readCacheBlock:">- readCacheBlock:</option>
+		
+		<option value="//api/name/startRequest">- startRequest</option>
+		
+		<option value="//api/name/startRequestWithCompleteBlock:">- startRequestWithCompleteBlock:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">TJBaseRequest Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Conforms to</th>
+	<td><a href="../Protocols/TJBaseRequestProtocol.html">TJBaseRequestProtocol</a></td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>TJBaseRequest.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>该类为整个框架的核心，在项目中主要使用该类相关API即可完成数据获取、下载、上传等操作；</p>
+
+<p>该类遵循TJBaseRequestProtocol协议，用于使用TJNetworkConfig类对框架做一些全局配置</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						<a title="Propertys" name="task_Propertys"></a>
+						<h2 class="task-title">Propertys</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/currentRequest" title="currentRequest"></a>
+	<h3 class="method-title"><code><a href="#//api/name/currentRequest">&nbsp;&nbsp;currentRequest</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>  当前请求，等同于 <code>requestTask.currentRequest</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSURLRequest *currentRequest</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/originalRequest" title="originalRequest"></a>
+	<h3 class="method-title"><code><a href="#//api/name/originalRequest">&nbsp;&nbsp;originalRequest</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>  原始请求，等同于<code>requestTask.originalRequest</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSURLRequest *originalRequest</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/url" title="url"></a>
+	<h3 class="method-title"><code><a href="#//api/name/url">&nbsp;&nbsp;url</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>请求地址</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *url</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/parameter" title="parameter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/parameter">&nbsp;&nbsp;parameter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>请求参数</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, nullable) id parameter</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/requestMethod" title="requestMethod"></a>
+	<h3 class="method-title"><code><a href="#//api/name/requestMethod">&nbsp;&nbsp;requestMethod</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>请求模式，默认TJRequestMethodGET</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) TJRequestMethod requestMethod</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Constants/TJRequestMethod.html">TJRequestMethod</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/resumePath" title="resumePath"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resumePath">&nbsp;&nbsp;resumePath</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>断点续传的恢复路径</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *resumePath</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/result" title="result"></a>
+	<h3 class="method-title"><code><a href="#//api/name/result">&nbsp;&nbsp;result</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>请求转换后结果，默认 result = <a href="#//api/name/originalResult">originalResult</a>;</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, nullable) id result</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/originalResult" title="originalResult"></a>
+	<h3 class="method-title"><code><a href="#//api/name/originalResult">&nbsp;&nbsp;originalResult</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>请求原始结果，默认返回NSData，下载返回NSString（文件缓存路径）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, nullable) id originalResult</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/error" title="error"></a>
+	<h3 class="method-title"><code><a href="#//api/name/error">&nbsp;&nbsp;error</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>请求错误</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, nullable) NSError *error</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/complete" title="complete"></a>
+	<h3 class="method-title"><code><a href="#//api/name/complete">&nbsp;&nbsp;complete</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>请求完成回调,响应序列化为NSData，下载result返回NSURL（文件缓存路径）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) TJBaseRequestCompletionBlock _Nullable complete</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Blocks/TJBaseRequestCompletionBlock.html">TJBaseRequestCompletionBlock</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/progress" title="progress"></a>
+	<h3 class="method-title"><code><a href="#//api/name/progress">&nbsp;&nbsp;progress</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>请求进度（上传、下载）</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) TJBaseRequestProgressBlock _Nullable progress</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Blocks/TJBaseRequestProgressBlock.html">TJBaseRequestProgressBlock</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadCachePathBlock" title="downloadCachePathBlock"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadCachePathBlock">&nbsp;&nbsp;downloadCachePathBlock</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>配置下载缓存路径，是否可继续下载</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) TJRequestDownloadCachePathBlock _Nullable downloadCachePathBlock</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Blocks/TJRequestDownloadCachePathBlock.html">TJRequestDownloadCachePathBlock</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/constructingBodyBlock" title="constructingBodyBlock"></a>
+	<h3 class="method-title"><code><a href="#//api/name/constructingBodyBlock">&nbsp;&nbsp;constructingBodyBlock</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>可以使用它构造HTTP主体上传文件，默认是nil。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, nullable) TJConstructBodyBlock constructingBodyBlock</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<div class="warning"><p><strong>Warning:</strong> 上传文件应当用“POST”模式请求，不支持@&ldquo;GET&rdquo;,@&ldquo;HEAD"请求</p></div>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection see-also-section">
+				<h4 class="method-subtitle">See Also</h4>
+				<ul>
+					
+					<li><code><p><a href="../Blocks/TJConstructBodyBlock.html">TJConstructBodyBlock</a></p></code></li>
+					
+				</ul>
+			</div>
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Class Methods" name="task_Class Methods"></a>
+						<h2 class="task-title">Class Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/request" title="request"></a>
+	<h3 class="method-title"><code><a href="#//api/name/request">+&nbsp;request</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>构建一个TJBaseRequest实例</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype _Nonnull)request</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/get:parameter:complete:" title="get:parameter:complete:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/get:parameter:complete:">+&nbsp;get:parameter:complete:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>配置get请求URL和参数，并启动会话</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)get:(NSString *_Nullable)<em>url</em> parameter:(id _Nullable)<em>parameter</em> complete:(TJBaseRequestCompletionBlock _Nullable)<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>url</code></th>
+						<td><p>接口地址</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parameter</code></th>
+						<td><p>请求参数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>请求完成的回调 <a href="../Blocks/TJBaseRequestCompletionBlock.html">TJBaseRequestCompletionBlock</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/post:parameter:complete:" title="post:parameter:complete:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/post:parameter:complete:">+&nbsp;post:parameter:complete:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>配置post请求URL和参数，并启动会话</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)post:(NSString *_Nullable)<em>url</em> parameter:(id _Nullable)<em>parameter</em> complete:(TJBaseRequestCompletionBlock _Nullable)<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>url</code></th>
+						<td><p>请求地址URL</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parameter</code></th>
+						<td><p>参数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>请求完成的回调 <a href="../Blocks/TJBaseRequestCompletionBlock.html">TJBaseRequestCompletionBlock</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/delet:parameter:complete:" title="delet:parameter:complete:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/delet:parameter:complete:">+&nbsp;delet:parameter:complete:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>配置delete请求URL和参数，并启动会话</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)delet:(NSString *_Nullable)<em>url</em> parameter:(id _Nullable)<em>parameter</em> complete:(TJBaseRequestCompletionBlock _Nullable)<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>url</code></th>
+						<td><p>请求地址URL</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parameter</code></th>
+						<td><p>参数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>请求完成的回调 <a href="../Blocks/TJBaseRequestCompletionBlock.html">TJBaseRequestCompletionBlock</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/upload:parameter:bodyBlock:complete:" title="upload:parameter:bodyBlock:complete:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/upload:parameter:bodyBlock:complete:">+&nbsp;upload:parameter:bodyBlock:complete:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>配置上传文件,参数,上传的数据，并启动会话,该函数用“POST”</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)upload:(NSString *_Nullable)<em>url</em> parameter:(id _Nullable)<em>parameter</em> bodyBlock:(TJConstructBodyBlock _Nullable)<em>bodyBlock</em> complete:(TJBaseRequestCompletionBlock _Nullable)<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>url</code></th>
+						<td><p>上传服务器URL</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parameter</code></th>
+						<td><p>参数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>bodyBlock</code></th>
+						<td><p>需要上传的表单数据（详细使用参见：AFURLRequestSerialization.h）<a href="../Blocks/TJConstructBodyBlock.html">TJConstructBodyBlock</a></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>请求完成的回调 <a href="../Blocks/TJBaseRequestCompletionBlock.html">TJBaseRequestCompletionBlock</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/download:parameter:resumePath:downloadCachePath:progress:complete:" title="download:parameter:resumePath:downloadCachePath:progress:complete:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/download:parameter:resumePath:downloadCachePath:progress:complete:">+&nbsp;download:parameter:resumePath:downloadCachePath:progress:complete:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>配置上传目的地URL,参数,下载内容存储地，并启动会话,该函数用“GET”</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)download:(NSString *_Nullable)<em>url</em> parameter:(id _Nullable)<em>parameter</em> resumePath:(NSString *_Nullable)<em>resumePath</em> downloadCachePath:(TJRequestDownloadCachePathBlock _Nullable)<em>cachePath</em> progress:(TJBaseRequestProgressBlock _Nullable)<em>progress</em> complete:(TJBaseRequestCompletionBlock _Nullable)<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>url</code></th>
+						<td><p>下载URL</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>parameter</code></th>
+						<td><p>参数</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>resumePath</code></th>
+						<td><p>断点继续下载地址</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>cachePath</code></th>
+						<td><p>下载内容缓存地址 <a href="../Blocks/TJRequestDownloadCachePathBlock.html">TJRequestDownloadCachePathBlock</a></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>progress</code></th>
+						<td><p>下载进度 <a href="../Blocks/TJBaseRequestProgressBlock.html">TJBaseRequestProgressBlock</a></p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>请求完成的回调 <a href="../Blocks/TJBaseRequestCompletionBlock.html">TJBaseRequestCompletionBlock</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/custom:complete:" title="custom:complete:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/custom:complete:">+&nbsp;custom:complete:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>配置自定义请求，并启动会话</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (TJBaseRequest *_Nonnull)custom:(TJBaseRequest *_Nullable ( ^ _Nullable ) ( void ))<em>request</em> complete:(TJBaseRequestCompletionBlock _Nullable)<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>request</code></th>
+						<td><p>请求对象配置</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>请求完成的回调 <a href="../Blocks/TJBaseRequestCompletionBlock.html">TJBaseRequestCompletionBlock</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Instance Methods" name="task_Instance Methods"></a>
+						<h2 class="task-title">Instance Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/startRequest" title="startRequest"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startRequest">&ndash;&nbsp;startRequest</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>开始当前请求</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)startRequest</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/startRequestWithCompleteBlock:" title="startRequestWithCompleteBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startRequestWithCompleteBlock:">&ndash;&nbsp;startRequestWithCompleteBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>开始当前请求,带请求完成回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)startRequestWithCompleteBlock:(TJBaseRequestCompletionBlock _Nullable)<em>complete</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>complete</code></th>
+						<td><p>请求完成回调 <a href="../Blocks/TJBaseRequestCompletionBlock.html">TJBaseRequestCompletionBlock</a></p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/readCache" title="readCache"></a>
+	<h3 class="method-title"><code><a href="#//api/name/readCache">&ndash;&nbsp;readCache</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>读取缓存</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (id&lt;NSCoding&gt; _Nullable)readCache</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>缓存结果,无缓存返回nil</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/readCacheBlock:" title="readCacheBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/readCacheBlock:">&ndash;&nbsp;readCacheBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>读取缓存,异步</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)readCacheBlock:(void ( ^ _Nullable ) ( NSString *_Nonnull key , id&lt;NSCoding&gt; _Nullable object ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>读取到缓存结果回调</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cancel" title="cancel"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cancel">&ndash;&nbsp;cancel</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>取消当前请求</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)cancel</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">TJBaseRequest.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2019 Xin Chao. All rights reserved. Updated: 2019-09-10</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

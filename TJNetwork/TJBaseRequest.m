@@ -69,7 +69,12 @@ requestHeaders = _requestHeaders;
     [self clearBlock];
 }
 
-- (void)readCacheBlock:(void (^)(id))block
+- (id<NSCoding>)readCache
+{
+    return [TJNetworkCache readCacheWithRequest:self];
+}
+
+- (void)readCacheBlock:(void (^)(NSString * _Nonnull, id<NSCoding> _Nonnull))block
 {
     [TJNetworkCache readCacheWithRequest:self withBlock:block];
 }
@@ -116,9 +121,9 @@ requestHeaders = _requestHeaders;
         return re;
     } complete:complete];
 }
-+ (TJBaseRequest *)download:(NSString *)url parameter:(id)parameter resumePath:(NSString *)resumePath downloadCachePath:(TJRequestDownloadCachePathBlock)cachePath progress:(TJBaseRequestProgressBlock)progress complete:(TJBaseRequestCompletionBlock)complete
++ (void)download:(NSString *)url parameter:(id)parameter resumePath:(NSString *)resumePath downloadCachePath:(TJRequestDownloadCachePathBlock)cachePath progress:(TJBaseRequestProgressBlock)progress complete:(TJBaseRequestCompletionBlock)complete
 {
-    return [self custom:^TJBaseRequest *{
+    [self custom:^TJBaseRequest *{
         TJBaseRequest *re = [TJBaseRequest request];
         re.url = url;
         re.parameter = parameter;

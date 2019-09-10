@@ -178,7 +178,8 @@
             requestError = error;
             if (request.downloadCachePathBlock) {
                 NSString *filePath = request.downloadCachePathBlock(response);
-                NSLog(@"下载完成");
+//                NSLog(@"下载完成");
+                NSAssert(filePath.length > 0, @"缓存路径不能为空");
                 if (resumePath.length) {
 //                    移动断点续传路径的文件到缓存路径
                     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
@@ -209,7 +210,7 @@
     length += [fileHandle seekToEndOfFile];  //将节点跳到文件的末尾
     [fileHandle writeData:data]; //追加写入数据
     [fileHandle closeFile];
-    NSLog(@"文件写入完成:%llu",length);
+//    NSLog(@"文件写入完成:%llu",length);
     return length;
 }
 
@@ -253,6 +254,10 @@
                 request.result = [[AFXMLParserResponseSerializer serializer] responseObjectForResponse:request.requestTask.response data:responseObject error:&requestError];
             } else if (request.responseSerializer == TJPropertyListResponseSerializer) {
                 request.result = [[AFPropertyListResponseSerializer serializer] responseObjectForResponse:request.requestTask.response data:responseObject error:&requestError];
+            } else if (request.responseSerializer == TJImageResponseSerializer) {
+                request.result = [[AFImageResponseSerializer serializer] responseObjectForResponse:request.requestTask.response data:responseObject error:&requestError];
+            } else if (request.responseSerializer == TJImageResponseSerializer) {
+                request.result = [[AFCompoundResponseSerializer serializer] responseObjectForResponse:request.requestTask.response data:responseObject error:&requestError];
             }
         }
     }

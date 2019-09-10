@@ -11,21 +11,18 @@
 
 
 @implementation TJNetworkTools
-+ (NSString *)URLWithString:(NSString *)URLString relativeToURL:(NSURL *)baseURL
++ (NSString *)URLWithPath:(NSString *)urlPath basePath:(NSString *)basePath
 {
-    NSURL *temp = [NSURL URLWithString:URLString];
-    //        如果URLString是一个完整的URL则不需要拼接baseUrl
+    NSURL *temp = [NSURL URLWithString:urlPath];
+    //        如果urlPath是一个完整的URL则不需要拼接
     if (temp && temp.host && temp.scheme) {
-        return URLString;
+        return urlPath;
     }
-    NSURL *URL = baseURL;
-    if (baseURL.absoluteString.length > 0 && ![baseURL.absoluteString hasSuffix:@"/"]) {
+    NSURL *URL = [NSURL URLWithString:basePath];
+    if (URL.absoluteString.length > 0 && ![URL.absoluteString hasSuffix:@"/"]) {
         URL = [URL URLByAppendingPathComponent:@""];
     }
-    
-    URL = [NSURL URLWithString:URLString relativeToURL:URL];
-    NSAssert((URL && URL.host && URL.scheme), @"请检查baseURL与URLString的值是否正确");
-    return URL.absoluteString;
+    return [NSURL URLWithString:urlPath relativeToURL:URL].absoluteString;
 }
 
 + (NSString *)stringToMD5:(NSString *)str

@@ -41,8 +41,8 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"暂停" style:UIBarButtonItemStyleDone target:self action:@selector(suspend)];
     
     allHTTPHeaderFields = self.request.requestTask.currentRequest.allHTTPHeaderFields;
-    [self.request readCacheBlock:^(id result) {
-        NSLog(@"读取缓存---->%@",result);
+    [self.request readCacheBlock:^(NSString * _Nonnull key, id<NSCoding>  _Nullable object) {
+        NSLog(@"读取缓存---->%@",object);
     }];
     
 //    这里其实可以不用__weak修饰self，TJBaseRequest内部对block做了清空处理不会造成循环引用问题

@@ -52,30 +52,22 @@
     }
 }
 
-+ (id)readCacheWithRequest:(TJBaseRequest *)request withBlock:(void(^)(id result))block
++ (id)readCacheWithRequest:(TJBaseRequest *)request
 {
-    NSString *key = [self cacheKeyWithRequest:request];
-    if (block) {
-        [[TJNetworkCache shareObject].cache objectForKey:key withBlock:^(NSString * _Nonnull key, id<NSCoding>  _Nonnull object) {
-            if (block) {
-                block(object);
-            }
-        }];
-        return nil;
-    } else {
-        return [[TJNetworkCache shareObject].cache objectForKey:key];
-    }
+    return [[TJNetworkCache shareObject].cache objectForKey:[self cacheKeyWithRequest:request]];
 }
 
-+ (void)removeCacheWithRequest:(TJBaseRequest *)request withBlock:(void (^)(id))block
++ (void)readCacheWithRequest:(TJBaseRequest *)request withBlock:(void (^)(NSString *, id<NSCoding>))block
+{
+    NSString *key = [self cacheKeyWithRequest:request];
+    [[TJNetworkCache shareObject].cache objectForKey:key withBlock:block];
+}
+
++ (void)removeCacheWithRequest:(TJBaseRequest *)request withBlock:(void (^)(NSString *))block
 {
     NSString *key = [self cacheKeyWithRequest:request];
     if (block) {
-        [[TJNetworkCache shareObject].cache removeObjectForKey:key withBlock:^(NSString * _Nonnull key) {
-            if (block) {
-                block(key);
-            }
-        }];
+        [[TJNetworkCache shareObject].cache removeObjectForKey:key withBlock:block];
     } else {
         [[TJNetworkCache shareObject].cache removeObjectForKey:key];
     }
@@ -89,15 +81,16 @@
         [[TJNetworkCache shareObject].cache removeAllObjects];
     }
 }
-+ (BOOL)containsRequestForRequest:(TJBaseRequest *)request withBlock:(void (^)(NSString *, BOOL))block
+
++ (BOOL)containsObjectForKey:(NSString *)key
+{
+    return [[TJNetworkCache shareObject].cache containsObjectForKey:key];
+}
+
++ (void)containsRequestForRequest:(TJBaseRequest *)request withBlock:(void (^)(NSString *, BOOL))block
 {
     NSString *key = [self cacheKeyWithRequest:request];
-    if (block) {
-        [[TJNetworkCache shareObject].cache containsObjectForKey:key withBlock:block];
-        return NO;
-    } else {
-        return [[TJNetworkCache shareObject].cache containsObjectForKey:key];
-    }
+    [[TJNetworkCache shareObject].cache containsObjectForKey:key withBlock:block];
 }
 
 + (NSString *)cacheKeyWithRequest:(TJBaseRequest *)request
