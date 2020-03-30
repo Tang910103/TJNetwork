@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -21,22 +21,29 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		5F1DE8BA5C647D5FE708377A /* Pods_TJNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA514789E3035A663AC11 /* Pods_TJNetwork.framework */; };
 		A5006803223F28E500591F94 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5006802223F28E500591F94 /* Default-568h@2x.png */; };
-		A529D1A8223B57D400770592 /* TJNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A529D1A2223B57D400770592 /* TJNetworkManager.m */; };
-		A529D1AA223B57D400770592 /* TJNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A529D1A7223B57D400770592 /* TJNetworkConfig.m */; };
-		A529D1AE223B58FD00770592 /* TJNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = A529D1AD223B58FD00770592 /* TJNetworkTools.m */; };
-		A52FB7502243292700272FBF /* TJBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A52FB74F2243292700272FBF /* TJBaseRequest.m */; };
 		A52FB75322432AC700272FBF /* TJBaseRequestTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = A52FB75222432AC700272FBF /* TJBaseRequestTestController.m */; };
 		A52FB75622432F3200272FBF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A52FB75522432F3200272FBF /* ViewController.m */; };
 		A536DF9E2244C67800C0FFEE /* TJRequestTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = A536DF9D2244C67800C0FFEE /* TJRequestTestController.m */; };
+		A57BFA0B2431AEEA00C97900 /* TJNetworkFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A57BFA022431AEEA00C97900 /* TJNetworkFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A57BFA122431AF5100C97900 /* TJNetworkFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = A57BFA102431AF5100C97900 /* TJNetworkFramework.h */; };
+		A57BFA142431AFE100C97900 /* TJNetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A529D1A5223B57D400770592 /* TJNetworkManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A57BFA152431AFEA00C97900 /* TJNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A529D1A2223B57D400770592 /* TJNetworkManager.m */; };
+		A57BFA162431AFED00C97900 /* TJNetworkConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = A529D1A4223B57D400770592 /* TJNetworkConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A57BFA172431AFF000C97900 /* TJNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A529D1A7223B57D400770592 /* TJNetworkConfig.m */; };
+		A57BFA182431AFF200C97900 /* TJNetworkCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A5C509B4223FF4B90063053A /* TJNetworkCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A57BFA192431AFF400C97900 /* TJNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C509B5223FF4B90063053A /* TJNetworkCache.m */; };
+		A57BFA1A2431AFF700C97900 /* TJBaseRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = A52FB74E2243292700272FBF /* TJBaseRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A57BFA1B2431AFFB00C97900 /* TJBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A52FB74F2243292700272FBF /* TJBaseRequest.m */; };
+		A57BFA1C2431AFFE00C97900 /* TJBaseRequestProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = A5CDB6FD22449CB8004559B2 /* TJBaseRequestProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A57BFA1D2431B00500C97900 /* TJNetworkTools.h in Headers */ = {isa = PBXBuildFile; fileRef = A529D1AC223B58FC00770592 /* TJNetworkTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A57BFA1E2431B00900C97900 /* TJNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = A529D1AD223B58FD00770592 /* TJNetworkTools.m */; };
+		A57BFA1F2431B00C00C97900 /* TJNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = A529D1AB223B582700770592 /* TJNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5A4BD3B2283496300EAA993 /* TJNetwork.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A5A4BD3A2283496300EAA993 /* TJNetwork.podspec */; };
+		A5A9FAAE2431D87A00115631 /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = A5A9FAAD2431D87900115631 /* Podfile.lock */; };
+		A5A9FAC324322B5C00115631 /* TJNetworkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A9FAC224322B5C00115631 /* TJNetworkFramework.framework */; };
 		A5B9978C223B917E00D5EDD6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B9978B223B917E00D5EDD6 /* DetailViewController.m */; };
-		A5BBF8B5232105010091C328 /* TJNetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A529D1A5223B57D400770592 /* TJNetworkManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5BBF8B6232105010091C328 /* TJNetworkConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = A529D1A4223B57D400770592 /* TJNetworkConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5BBF8B7232105010091C328 /* TJNetworkCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A5C509B4223FF4B90063053A /* TJNetworkCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5BBF8B8232105020091C328 /* TJBaseRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = A52FB74E2243292700272FBF /* TJBaseRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5BBF8B9232105020091C328 /* TJBaseRequestProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = A5CDB6FD22449CB8004559B2 /* TJBaseRequestProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A5BBF8BA232105020091C328 /* TJNetworkTools.h in Headers */ = {isa = PBXBuildFile; fileRef = A529D1AC223B58FC00770592 /* TJNetworkTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5BBF8C323210F730091C328 /* UIFont+ex.h in Headers */ = {isa = PBXBuildFile; fileRef = A5BBF8C123210F730091C328 /* UIFont+ex.h */; };
 		A5BBF8C423210F730091C328 /* UIFont+ex.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BBF8C223210F730091C328 /* UIFont+ex.m */; };
 		A5C260022232579F00EBFB3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C260012232579F00EBFB3D /* AppDelegate.m */; };
@@ -44,17 +51,43 @@
 		A5C2600A223257A100EBFB3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C26009223257A100EBFB3D /* Assets.xcassets */; };
 		A5C2600D223257A100EBFB3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C2600B223257A100EBFB3D /* LaunchScreen.storyboard */; };
 		A5C26010223257A100EBFB3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C2600F223257A100EBFB3D /* main.m */; };
-		A5C509B6223FF4B90063053A /* TJNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C509B5223FF4B90063053A /* TJNetworkCache.m */; };
-		F01157A97F4AFDAE2A239777 /* libPods-TJNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C0BED62A1C7C41EC83F2C6 /* libPods-TJNetworking.a */; };
+		B80EE9D0A66140FD34A657B3 /* Pods_TJNetworkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE18FA97116EFD418DFFD404 /* Pods_TJNetworkFramework.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A57BFA072431AEEA00C97900 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5C25FF52232579F00EBFB3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A57BFA012431AEEA00C97900;
+			remoteInfo = TJNetworkingFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A57BFA0A2431AEEA00C97900 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A57BFA0B2431AEEA00C97900 /* TJNetworkFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		169B37CA6054920B9E44683C /* Pods-TJNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJNetworking.release.xcconfig"; path = "Pods/Target Support Files/Pods-TJNetworking/Pods-TJNetworking.release.xcconfig"; sourceTree = "<group>"; };
+		2A1BC051B3E39A3DB0D9F016 /* Pods-TJNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TJNetwork/Pods-TJNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		2B255BEED14A93743E0731B7 /* Pods-TJNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TJNetworking/Pods-TJNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 		3D902138CE717A7DF3CEA143 /* libPods-XCNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XCNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BBCA514789E3035A663AC11 /* Pods_TJNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TJNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C130F59CD38359383B485BF /* Pods-XCNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCNetworking.release.xcconfig"; path = "Pods/Target Support Files/Pods-XCNetworking/Pods-XCNetworking.release.xcconfig"; sourceTree = "<group>"; };
 		5DADE6F6AB45D1A82A91EDB9 /* Pods-XCNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XCNetworking/Pods-XCNetworking.debug.xcconfig"; sourceTree = "<group>"; };
-		70C0BED62A1C7C41EC83F2C6 /* libPods-TJNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TJNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F812C931D413ECA209B2C07 /* Pods-TJNetworkFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJNetworkFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TJNetworkFramework/Pods-TJNetworkFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		896FB3A36C7E54E7E1007308 /* Pods-TJNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TJNetwork/Pods-TJNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		A5006802223F28E500591F94 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A529D1A2223B57D400770592 /* TJNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJNetworkManager.m; sourceTree = "<group>"; };
 		A529D1A4223B57D400770592 /* TJNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJNetworkConfig.h; sourceTree = "<group>"; };
@@ -71,12 +104,17 @@
 		A52FB75522432F3200272FBF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A536DF9C2244C67700C0FFEE /* TJRequestTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRequestTestController.h; sourceTree = "<group>"; };
 		A536DF9D2244C67800C0FFEE /* TJRequestTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRequestTestController.m; sourceTree = "<group>"; };
+		A57BFA022431AEEA00C97900 /* TJNetworkFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TJNetworkFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A57BFA102431AF5100C97900 /* TJNetworkFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJNetworkFramework.h; sourceTree = "<group>"; };
+		A57BFA112431AF5100C97900 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5A4BD3A2283496300EAA993 /* TJNetwork.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TJNetwork.podspec; sourceTree = SOURCE_ROOT; };
+		A5A9FAAD2431D87900115631 /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = file; path = Podfile.lock; sourceTree = SOURCE_ROOT; };
+		A5A9FAC224322B5C00115631 /* TJNetworkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TJNetworkFramework.framework; sourceTree = "<group>"; };
 		A5B9978A223B917E00D5EDD6 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		A5B9978B223B917E00D5EDD6 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		A5BBF8C123210F730091C328 /* UIFont+ex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+ex.h"; sourceTree = "<group>"; };
 		A5BBF8C223210F730091C328 /* UIFont+ex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+ex.m"; sourceTree = "<group>"; };
-		A5C25FFD2232579F00EBFB3D /* TJNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TJNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C25FFD2232579F00EBFB3D /* TJNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TJNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C260002232579F00EBFB3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A5C260012232579F00EBFB3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A5C260072232579F00EBFB3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,14 +125,25 @@
 		A5C509B4223FF4B90063053A /* TJNetworkCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJNetworkCache.h; sourceTree = "<group>"; };
 		A5C509B5223FF4B90063053A /* TJNetworkCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TJNetworkCache.m; sourceTree = "<group>"; };
 		A5CDB6FD22449CB8004559B2 /* TJBaseRequestProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJBaseRequestProtocol.h; sourceTree = "<group>"; };
+		BE18FA97116EFD418DFFD404 /* Pods_TJNetworkFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TJNetworkFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FADED15A7C42AB5C34E70435 /* Pods-TJNetworkFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJNetworkFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-TJNetworkFramework/Pods-TJNetworkFramework.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A57BF9FF2431AEEA00C97900 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B80EE9D0A66140FD34A657B3 /* Pods_TJNetworkFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5C25FFA2232579F00EBFB3D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F01157A97F4AFDAE2A239777 /* libPods-TJNetworking.a in Frameworks */,
+				A5A9FAC324322B5C00115631 /* TJNetworkFramework.framework in Frameworks */,
+				5F1DE8BA5C647D5FE708377A /* Pods_TJNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,10 +169,21 @@
 			path = TJNetwork;
 			sourceTree = "<group>";
 		};
+		A57BFA0F2431AF5100C97900 /* TJNetworkFramework */ = {
+			isa = PBXGroup;
+			children = (
+				A57BFA102431AF5100C97900 /* TJNetworkFramework.h */,
+				A57BFA112431AF5100C97900 /* Info.plist */,
+			);
+			path = TJNetworkFramework;
+			sourceTree = "<group>";
+		};
 		A5C25FF42232579F00EBFB3D = {
 			isa = PBXGroup;
 			children = (
 				A5006802223F28E500591F94 /* Default-568h@2x.png */,
+				A5A9FAC224322B5C00115631 /* TJNetworkFramework.framework */,
+				A57BFA0F2431AF5100C97900 /* TJNetworkFramework */,
 				A529D1A1223B57D400770592 /* TJNetwork */,
 				A5C25FFF2232579F00EBFB3D /* TJNetworkDemo */,
 				A5C25FFE2232579F00EBFB3D /* Products */,
@@ -135,7 +195,8 @@
 		A5C25FFE2232579F00EBFB3D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A5C25FFD2232579F00EBFB3D /* TJNetworking.app */,
+				A5C25FFD2232579F00EBFB3D /* TJNetwork.app */,
+				A57BFA022431AEEA00C97900 /* TJNetworkFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,6 +221,7 @@
 				A5C2600B223257A100EBFB3D /* LaunchScreen.storyboard */,
 				A5A4BD3A2283496300EAA993 /* TJNetwork.podspec */,
 				A5C2600E223257A100EBFB3D /* Info.plist */,
+				A5A9FAAD2431D87900115631 /* Podfile.lock */,
 				A5C2600F223257A100EBFB3D /* main.m */,
 			);
 			path = TJNetworkDemo;
@@ -172,6 +234,10 @@
 				169B37CA6054920B9E44683C /* Pods-TJNetworking.release.xcconfig */,
 				5DADE6F6AB45D1A82A91EDB9 /* Pods-XCNetworking.debug.xcconfig */,
 				4C130F59CD38359383B485BF /* Pods-XCNetworking.release.xcconfig */,
+				896FB3A36C7E54E7E1007308 /* Pods-TJNetwork.debug.xcconfig */,
+				2A1BC051B3E39A3DB0D9F016 /* Pods-TJNetwork.release.xcconfig */,
+				7F812C931D413ECA209B2C07 /* Pods-TJNetworkFramework.debug.xcconfig */,
+				FADED15A7C42AB5C34E70435 /* Pods-TJNetworkFramework.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -179,8 +245,9 @@
 		D83B8EFB1A43F966C5378135 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				70C0BED62A1C7C41EC83F2C6 /* libPods-TJNetworking.a */,
 				3D902138CE717A7DF3CEA143 /* libPods-XCNetworking.a */,
+				4BBCA514789E3035A663AC11 /* Pods_TJNetwork.framework */,
+				BE18FA97116EFD418DFFD404 /* Pods_TJNetworkFramework.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,40 +255,71 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		A57BF9FD2431AEEA00C97900 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A57BFA142431AFE100C97900 /* TJNetworkManager.h in Headers */,
+				A57BFA1F2431B00C00C97900 /* TJNetwork.h in Headers */,
+				A57BFA1D2431B00500C97900 /* TJNetworkTools.h in Headers */,
+				A57BFA162431AFED00C97900 /* TJNetworkConfig.h in Headers */,
+				A57BFA182431AFF200C97900 /* TJNetworkCache.h in Headers */,
+				A57BFA1A2431AFF700C97900 /* TJBaseRequest.h in Headers */,
+				A57BFA1C2431AFFE00C97900 /* TJBaseRequestProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5BBF8B4232104E80091C328 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A5BBF8C323210F730091C328 /* UIFont+ex.h in Headers */,
-				A5BBF8B5232105010091C328 /* TJNetworkManager.h in Headers */,
-				A5BBF8B6232105010091C328 /* TJNetworkConfig.h in Headers */,
-				A5BBF8B7232105010091C328 /* TJNetworkCache.h in Headers */,
-				A5BBF8B8232105020091C328 /* TJBaseRequest.h in Headers */,
-				A5BBF8B9232105020091C328 /* TJBaseRequestProtocol.h in Headers */,
-				A5BBF8BA232105020091C328 /* TJNetworkTools.h in Headers */,
+				A57BFA122431AF5100C97900 /* TJNetworkFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A5C25FFC2232579F00EBFB3D /* TJNetworking */ = {
+		A57BFA012431AEEA00C97900 /* TJNetworkFramework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A5C26013223257A100EBFB3D /* Build configuration list for PBXNativeTarget "TJNetworking" */;
+			buildConfigurationList = A57BFA0E2431AEEA00C97900 /* Build configuration list for PBXNativeTarget "TJNetworkFramework" */;
+			buildPhases = (
+				C6393F5216B89728A9E63E00 /* [CP] Check Pods Manifest.lock */,
+				A57BF9FD2431AEEA00C97900 /* Headers */,
+				A57BF9FE2431AEEA00C97900 /* Sources */,
+				A57BF9FF2431AEEA00C97900 /* Frameworks */,
+				A57BFA002431AEEA00C97900 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TJNetworkFramework;
+			productName = TJNetworkingFramework;
+			productReference = A57BFA022431AEEA00C97900 /* TJNetworkFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A5C25FFC2232579F00EBFB3D /* TJNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5C26013223257A100EBFB3D /* Build configuration list for PBXNativeTarget "TJNetwork" */;
 			buildPhases = (
 				5234D1DB215517A5F0301AB6 /* [CP] Check Pods Manifest.lock */,
 				A5BBF8B4232104E80091C328 /* Headers */,
 				A5C25FF92232579F00EBFB3D /* Sources */,
 				A5C25FFA2232579F00EBFB3D /* Frameworks */,
 				A5C25FFB2232579F00EBFB3D /* Resources */,
+				A57BFA0A2431AEEA00C97900 /* Embed Frameworks */,
+				20D4E3098A88F9E5ED5D7880 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A57BFA082431AEEA00C97900 /* PBXTargetDependency */,
 			);
-			name = TJNetworking;
+			name = TJNetwork;
 			productName = TJNetworkManager;
-			productReference = A5C25FFD2232579F00EBFB3D /* TJNetworking.app */;
+			productReference = A5C25FFD2232579F00EBFB3D /* TJNetwork.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -233,6 +331,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Tang杰";
 				TargetAttributes = {
+					A57BFA012431AEEA00C97900 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					A5BBF8AD2320FE7D0091C328 = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -246,7 +347,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A5C25FF82232579F00EBFB3D /* Build configuration list for PBXProject "TJNetworking" */;
+			buildConfigurationList = A5C25FF82232579F00EBFB3D /* Build configuration list for PBXProject "TJNetwork" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -259,17 +360,26 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A5C25FFC2232579F00EBFB3D /* TJNetworking */,
+				A5C25FFC2232579F00EBFB3D /* TJNetwork */,
 				A5BBF8AD2320FE7D0091C328 /* doc */,
+				A57BFA012431AEEA00C97900 /* TJNetworkFramework */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A57BFA002431AEEA00C97900 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5C25FFB2232579F00EBFB3D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A9FAAE2431D87A00115631 /* Podfile.lock in Resources */,
 				A5A4BD3B2283496300EAA993 /* TJNetwork.podspec in Resources */,
 				A5C2600D223257A100EBFB3D /* LaunchScreen.storyboard in Resources */,
 				A5006803223F28E500591F94 /* Default-568h@2x.png in Resources */,
@@ -281,6 +391,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		20D4E3098A88F9E5ED5D7880 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TJNetwork/Pods-TJNetwork-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TJNetwork/Pods-TJNetwork-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TJNetwork/Pods-TJNetwork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5234D1DB215517A5F0301AB6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -292,7 +419,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TJNetworking-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TJNetwork-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -316,29 +443,66 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#rm -rf ~/Desktop/doc\n#headerdoc2html -o ~/Desktop/doc /Volumes/DATA/新潮/TJNetwork/TJNetwork/*.h -j -apple\n#gatherheaderdoc ~/Desktop/doc index.html\n\n#open ~/Desktop/doc/index.html\n\ncompany=\"Xin Chao\";  \ncompanyID=\"com.xinchao\";\ncompanyURL=\"https://www.xinchao.com\";\ntarget=\"iphoneos\";\noutputPath=\"./document\";\n# End constants\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--no-create-docset \\\n--output \"${outputPath}\" \\\n-i *.m \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n./TJNetwork\n";
 		};
+		C6393F5216B89728A9E63E00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TJNetworkFramework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A57BF9FE2431AEEA00C97900 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A57BFA1B2431AFFB00C97900 /* TJBaseRequest.m in Sources */,
+				A57BFA192431AFF400C97900 /* TJNetworkCache.m in Sources */,
+				A57BFA172431AFF000C97900 /* TJNetworkConfig.m in Sources */,
+				A57BFA152431AFEA00C97900 /* TJNetworkManager.m in Sources */,
+				A57BFA1E2431B00900C97900 /* TJNetworkTools.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5C25FF92232579F00EBFB3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A529D1AE223B58FD00770592 /* TJNetworkTools.m in Sources */,
-				A529D1AA223B57D400770592 /* TJNetworkConfig.m in Sources */,
-				A52FB7502243292700272FBF /* TJBaseRequest.m in Sources */,
 				A5B9978C223B917E00D5EDD6 /* DetailViewController.m in Sources */,
 				A536DF9E2244C67800C0FFEE /* TJRequestTestController.m in Sources */,
-				A529D1A8223B57D400770592 /* TJNetworkManager.m in Sources */,
 				A52FB75622432F3200272FBF /* ViewController.m in Sources */,
 				A5C26010223257A100EBFB3D /* main.m in Sources */,
 				A5C260022232579F00EBFB3D /* AppDelegate.m in Sources */,
 				A52FB75322432AC700272FBF /* TJBaseRequestTestController.m in Sources */,
-				A5C509B6223FF4B90063053A /* TJNetworkCache.m in Sources */,
 				A5BBF8C423210F730091C328 /* UIFont+ex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A57BFA082431AEEA00C97900 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A57BFA012431AEEA00C97900 /* TJNetworkFramework */;
+			targetProxy = A57BFA072431AEEA00C97900 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A5C260062232579F00EBFB3D /* Main.storyboard */ = {
@@ -360,6 +524,68 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A57BFA0C2431AEEA00C97900 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F812C931D413ECA209B2C07 /* Pods-TJNetworkFramework.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BDKEPMWR2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TJNetworkFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xinchao.TJNetworkingFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A57BFA0D2431AEEA00C97900 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FADED15A7C42AB5C34E70435 /* Pods-TJNetworkFramework.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BDKEPMWR2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TJNetworkFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xinchao.TJNetworkingFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		A5BBF8AF2320FE7E0091C328 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -494,19 +720,24 @@
 		};
 		A5C26014223257A100EBFB3D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B255BEED14A93743E0731B7 /* Pods-TJNetworking.debug.xcconfig */;
+			baseConfigurationReference = 896FB3A36C7E54E7E1007308 /* Pods-TJNetwork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BDKEPMWR2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TJNetworkDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xinchao.TJNetworkManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -516,19 +747,24 @@
 		};
 		A5C26015223257A100EBFB3D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 169B37CA6054920B9E44683C /* Pods-TJNetworking.release.xcconfig */;
+			baseConfigurationReference = 2A1BC051B3E39A3DB0D9F016 /* Pods-TJNetwork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7BDKEPMWR2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TJNetworkDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xinchao.TJNetworkManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -539,6 +775,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A57BFA0E2431AEEA00C97900 /* Build configuration list for PBXNativeTarget "TJNetworkFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A57BFA0C2431AEEA00C97900 /* Debug */,
+				A57BFA0D2431AEEA00C97900 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A5BBF8AE2320FE7E0091C328 /* Build configuration list for PBXAggregateTarget "doc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -548,7 +793,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A5C25FF82232579F00EBFB3D /* Build configuration list for PBXProject "TJNetworking" */ = {
+		A5C25FF82232579F00EBFB3D /* Build configuration list for PBXProject "TJNetwork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A5C26011223257A100EBFB3D /* Debug */,
@@ -557,7 +802,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A5C26013223257A100EBFB3D /* Build configuration list for PBXNativeTarget "TJNetworking" */ = {
+		A5C26013223257A100EBFB3D /* Build configuration list for PBXNativeTarget "TJNetwork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A5C26014223257A100EBFB3D /* Debug */,

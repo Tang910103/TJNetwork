@@ -1,14 +1,14 @@
-project 'TJNetworking.xcodeproj'
+project 'TJNetwork.xcodeproj'
+project 'TJNetworkFramework.xcodeproj'
 
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
-
-target 'TJNetworking' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
-
-  # Pods for TJNetworking
-  pod 'AFNetworking'
-  pod 'YYCache'
-
+targetArray = ['TJNetwork','TJNetworkFramework']
+targetArray.each do |t|
+    target t do
+        use_frameworks!
+        
+        pod 'AFNetworking'
+        pod 'YYCache'
+    end
 end
